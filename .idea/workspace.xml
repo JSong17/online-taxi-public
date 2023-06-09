@@ -22,14 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="api-passenger通过feign的方式，调用sevice-verificationcode，获取验证码完成">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="乘客api,发送验证码服务完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-passenger/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/controller/VerificationCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/controller/VerificationCodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/request/VerificationCodeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/request/VerificationCodeDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/VerificationCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/VerificationCodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-passenger/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/dto/ResponseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/dto/ResponseResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/dto/ResponseResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/dto/ResponseResult.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +37,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -93,7 +90,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServiceVerificationcodeApplication">
+  <component name="RunManager" selected="Spring Boot.ApiPassengerApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -142,7 +139,7 @@
       <workItem from="1686123573157" duration="1857000" />
       <workItem from="1686230215862" duration="4898000" />
       <workItem from="1686244116843" duration="1793000" />
-      <workItem from="1686279651270" duration="13016000" />
+      <workItem from="1686279651270" duration="14318000" />
     </task>
     <task id="LOCAL-00001" summary="api-passenger获取验证码">
       <created>1686244783834</created>
@@ -193,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686313012132</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="乘客api,发送验证码服务完成">
+      <created>1686315979654</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686315979654</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +220,8 @@
     <MESSAGE value="api-passenger配置nacos" />
     <MESSAGE value="创建了sevice-verificationcode&amp;注册到了nacos" />
     <MESSAGE value="api-passenger通过feign的方式，调用sevice-verificationcode，获取验证码完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="api-passenger通过feign的方式，调用sevice-verificationcode，获取验证码完成" />
+    <MESSAGE value="乘客api,发送验证码服务完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="乘客api,发送验证码服务完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1686295611472">
@@ -239,38 +244,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1293" height="282" key="GridCell.Tab.0.bottom" timestamp="1686315664713">
+    <state width="1293" height="282" key="GridCell.Tab.0.bottom" timestamp="1686322128724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686315664713" />
-    <state width="1293" height="282" key="GridCell.Tab.0.center" timestamp="1686315664713">
+    <state width="1293" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686322128724" />
+    <state width="1293" height="282" key="GridCell.Tab.0.center" timestamp="1686322128724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686315664713" />
-    <state width="1293" height="282" key="GridCell.Tab.0.left" timestamp="1686315664713">
+    <state width="1293" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686322128724" />
+    <state width="1293" height="282" key="GridCell.Tab.0.left" timestamp="1686322128723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686315664713" />
-    <state width="1293" height="282" key="GridCell.Tab.0.right" timestamp="1686315664713">
+    <state width="1293" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686322128723" />
+    <state width="1293" height="282" key="GridCell.Tab.0.right" timestamp="1686322128724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686315664713" />
-    <state width="1293" height="282" key="GridCell.Tab.1.bottom" timestamp="1686315664714">
+    <state width="1293" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686322128724" />
+    <state width="1293" height="282" key="GridCell.Tab.1.bottom" timestamp="1686322128724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686315664714" />
-    <state width="1293" height="282" key="GridCell.Tab.1.center" timestamp="1686315664714">
+    <state width="1293" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686322128724" />
+    <state width="1293" height="282" key="GridCell.Tab.1.center" timestamp="1686322128724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686315664714" />
-    <state width="1293" height="282" key="GridCell.Tab.1.left" timestamp="1686315664713">
+    <state width="1293" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686322128724" />
+    <state width="1293" height="282" key="GridCell.Tab.1.left" timestamp="1686322128724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686315664713" />
-    <state width="1293" height="282" key="GridCell.Tab.1.right" timestamp="1686315664714">
+    <state width="1293" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686322128724" />
+    <state width="1293" height="282" key="GridCell.Tab.1.right" timestamp="1686322128724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686315664714" />
+    <state width="1293" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686322128724" />
     <state width="1293" height="282" key="GridCell.Tab.2.bottom" timestamp="1686300834037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -291,10 +296,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1686230426736" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686313015594">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686315982736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686313015594" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686315982736" />
     <state x="662" y="118" width="596" height="804" key="find.popup" timestamp="1686230562976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -303,5 +308,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="593" y="179" width="1251" height="550" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1686295563580" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1686321955159">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1686321955159" />
   </component>
 </project>
