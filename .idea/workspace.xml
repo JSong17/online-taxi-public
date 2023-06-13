@@ -22,9 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="根据手机号查询用户信息">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="插入用户">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-passenger-user/src/main/java/com/mashibing/servicepassengeruser/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-passenger-user/src/main/java/com/mashibing/servicepassengeruser/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-passenger-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-passenger-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-passenger-user/src/main/java/com/mashibing/servicepassengeruser/ServicePassengerUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-passenger-user/src/main/java/com/mashibing/servicepassengeruser/ServicePassengerUserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-passenger-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-passenger-user/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +153,7 @@
       <workItem from="1686454778885" duration="1439000" />
       <workItem from="1686558846291" duration="6465000" />
       <workItem from="1686575916740" duration="1487000" />
-      <workItem from="1686649479839" duration="1284000" />
+      <workItem from="1686649479839" duration="9132000" />
     </task>
     <task id="LOCAL-00001" summary="api-passenger获取验证码">
       <created>1686244783834</created>
@@ -244,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686576791107</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="插入用户">
+      <created>1686650809975</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1686650809975</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +282,8 @@
     <MESSAGE value="创建项目service-passenger-user" />
     <MESSAGE value="service-passenger-user，登录or注册用户骨架编写完成" />
     <MESSAGE value="根据手机号查询用户信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="根据手机号查询用户信息" />
+    <MESSAGE value="插入用户" />
+    <option name="LAST_COMMIT_MESSAGE" value="插入用户" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1686295611472">
@@ -300,38 +310,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1293" height="283" key="GridCell.Tab.0.bottom" timestamp="1686650744797">
+    <state width="1293" height="283" key="GridCell.Tab.0.bottom" timestamp="1686663086509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686650744797" />
-    <state width="1293" height="283" key="GridCell.Tab.0.center" timestamp="1686650744797">
+    <state width="1293" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686663086509" />
+    <state width="1293" height="283" key="GridCell.Tab.0.center" timestamp="1686663086508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686650744797" />
-    <state width="1293" height="283" key="GridCell.Tab.0.left" timestamp="1686650744796">
+    <state width="1293" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686663086508" />
+    <state width="1293" height="283" key="GridCell.Tab.0.left" timestamp="1686663086508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686650744796" />
-    <state width="1293" height="283" key="GridCell.Tab.0.right" timestamp="1686650744797">
+    <state width="1293" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686663086508" />
+    <state width="1293" height="283" key="GridCell.Tab.0.right" timestamp="1686663086509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686650744797" />
-    <state width="1293" height="283" key="GridCell.Tab.1.bottom" timestamp="1686650744797">
+    <state width="1293" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686663086509" />
+    <state width="1293" height="283" key="GridCell.Tab.1.bottom" timestamp="1686663086509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686650744797" />
-    <state width="1293" height="283" key="GridCell.Tab.1.center" timestamp="1686650744797">
+    <state width="1293" height="283" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686663086509" />
+    <state width="1293" height="283" key="GridCell.Tab.1.center" timestamp="1686663086509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686650744797" />
-    <state width="1293" height="283" key="GridCell.Tab.1.left" timestamp="1686650744797">
+    <state width="1293" height="283" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686663086509" />
+    <state width="1293" height="283" key="GridCell.Tab.1.left" timestamp="1686663086509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686650744797" />
-    <state width="1293" height="283" key="GridCell.Tab.1.right" timestamp="1686650744797">
+    <state width="1293" height="283" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686663086509" />
+    <state width="1293" height="283" key="GridCell.Tab.1.right" timestamp="1686663086509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686650744797" />
+    <state width="1293" height="283" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686663086509" />
     <state width="1293" height="282" key="GridCell.Tab.2.bottom" timestamp="1686300834037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -352,10 +362,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1686230426736" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686576794883">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686662060983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686576794883" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686662060983" />
     <state x="662" y="118" width="596" height="804" key="find.popup" timestamp="1686230562976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -368,9 +378,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1686623061769" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1686456096759">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1686662380327">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1686456096759" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1686662380327" />
   </component>
 </project>
