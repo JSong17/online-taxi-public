@@ -22,9 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="service-passenger-user注册到nacos">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="乘客api服务 调用 乘客用户服务">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/VerificationCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/VerificationCodeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +35,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -88,7 +88,20 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiPassengerApplication">
+  <component name="RunManager" selected="Application.JwtUtils">
+    <configuration name="JwtUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mashibing.internalcommon.util.JwtUtils" />
+      <module name="internal-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mashibing.internalcommon.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -131,6 +144,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JwtUtils" />
         <item itemvalue="Spring Boot.ApiPassengerApplication" />
       </list>
     </recent_temporary>
@@ -151,7 +165,7 @@
       <workItem from="1686454778885" duration="1439000" />
       <workItem from="1686558846291" duration="6465000" />
       <workItem from="1686575916740" duration="1487000" />
-      <workItem from="1686649479839" duration="10624000" />
+      <workItem from="1686649479839" duration="13159000" />
     </task>
     <task id="LOCAL-00001" summary="api-passenger获取验证码">
       <created>1686244783834</created>
@@ -258,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686663379537</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="乘客api服务 调用 乘客用户服务">
+      <created>1686666585648</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1686666585648</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +310,8 @@
     <MESSAGE value="根据手机号查询用户信息" />
     <MESSAGE value="插入用户" />
     <MESSAGE value="service-passenger-user注册到nacos" />
-    <option name="LAST_COMMIT_MESSAGE" value="service-passenger-user注册到nacos" />
+    <MESSAGE value="乘客api服务 调用 乘客用户服务" />
+    <option name="LAST_COMMIT_MESSAGE" value="乘客api服务 调用 乘客用户服务" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1686295611472">
@@ -316,38 +338,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1293" height="283" key="GridCell.Tab.0.bottom" timestamp="1686666213729">
+    <state width="1293" height="283" key="GridCell.Tab.0.bottom" timestamp="1686714952958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686666213729" />
-    <state width="1293" height="283" key="GridCell.Tab.0.center" timestamp="1686666213729">
+    <state width="1293" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686714952958" />
+    <state width="1293" height="283" key="GridCell.Tab.0.center" timestamp="1686714952957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686666213729" />
-    <state width="1293" height="283" key="GridCell.Tab.0.left" timestamp="1686666213729">
+    <state width="1293" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686714952957" />
+    <state width="1293" height="283" key="GridCell.Tab.0.left" timestamp="1686714952948">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686666213729" />
-    <state width="1293" height="283" key="GridCell.Tab.0.right" timestamp="1686666213729">
+    <state width="1293" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686714952948" />
+    <state width="1293" height="283" key="GridCell.Tab.0.right" timestamp="1686714952957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686666213729" />
-    <state width="1293" height="283" key="GridCell.Tab.1.bottom" timestamp="1686666213730">
+    <state width="1293" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686714952957" />
+    <state width="1293" height="283" key="GridCell.Tab.1.bottom" timestamp="1686714952958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686666213730" />
-    <state width="1293" height="283" key="GridCell.Tab.1.center" timestamp="1686666213730">
+    <state width="1293" height="283" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686714952958" />
+    <state width="1293" height="283" key="GridCell.Tab.1.center" timestamp="1686714952958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686666213730" />
-    <state width="1293" height="283" key="GridCell.Tab.1.left" timestamp="1686666213729">
+    <state width="1293" height="283" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686714952958" />
+    <state width="1293" height="283" key="GridCell.Tab.1.left" timestamp="1686714952958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686666213729" />
-    <state width="1293" height="283" key="GridCell.Tab.1.right" timestamp="1686666213730">
+    <state width="1293" height="283" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686714952958" />
+    <state width="1293" height="283" key="GridCell.Tab.1.right" timestamp="1686714952958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686666213730" />
+    <state width="1293" height="283" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686714952958" />
     <state width="1293" height="282" key="GridCell.Tab.2.bottom" timestamp="1686300834037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -368,10 +390,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1686230426736" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686663381495">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686666588187">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686663381495" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686666588187" />
     <state x="662" y="118" width="596" height="804" key="find.popup" timestamp="1686230562976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -388,5 +410,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1686662380327" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/VerificationCodeService.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
