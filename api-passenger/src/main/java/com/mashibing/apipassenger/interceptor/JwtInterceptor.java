@@ -31,13 +31,13 @@ public class JwtInterceptor implements HandlerInterceptor {
             resultString = "token sign error";
             result = false;
         }catch (TokenExpiredException e) {
-            resultString = "token TokenExpiredException error";
+            resultString = "token sign error";
             result = false;
         }catch (AlgorithmMismatchException e) {
-            resultString = "token AlgorithmMismatchException error";
+            resultString = "token sign error";
             result = false;
         }catch (Exception e) {
-            resultString = "token invild";
+            resultString = "token sign error";
             result = false;
         }
 
