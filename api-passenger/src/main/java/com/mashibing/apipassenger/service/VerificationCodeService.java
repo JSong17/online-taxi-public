@@ -10,6 +10,7 @@ import com.mashibing.internalcommon.request.VerificationCodeDTO;
 import com.mashibing.internalcommon.response.NumberCodeResponse;
 import com.mashibing.internalcommon.response.TokenResponse;
 import com.mashibing.internalcommon.util.JwtUtils;
+import com.mashibing.internalcommon.util.RedisPrefixUtils;
 import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,11 +29,7 @@ public class VerificationCodeService {
     @Autowired
     private ServiceVerificationcodeClient serviceVerificationcodeClient;
 
-    //乘客验证码的前缀
-    private String verificationCodePrefix = "passenger-verification-code-";
 
-    //token存储的前缀
-    private String tokenPrefix = "token-";
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
@@ -52,7 +49,7 @@ public class VerificationCodeService {
         System.out.println("存入redis");
 
         //key,value,过期时间
-        String key = generatorKeyByPhone(passengerPhone);
+        String key = RedisPrefixUtils.generatorKeyByPhone(passengerPhone);
 
         //存入redis
         stringRedisTemplate.opsForValue().set(key, numberCode+"",2, TimeUnit.MINUTES);
@@ -61,20 +58,7 @@ public class VerificationCodeService {
         return  ResponseResult.success("");
     }
 
-    /*
-    * 根据手机号，生成key
-    * */
-    private String generatorKeyByPhone(String passengerPhone){
-        return verificationCodePrefix + passengerPhone;
-    }
 
-
-    /*
-    * 根据手机号何身份标识，生成token
-    * */
-    private String generatorTokenKey(String phone,String identity){
-        return  tokenPrefix + phone + "-" + identity;
-    }
 
 
 
@@ -88,7 +72,7 @@ public class VerificationCodeService {
 
         //根据手机号，去redis读取验证码
         //生成key
-        String key = generatorKeyByPhone(passengerPhone);
+        String key = RedisPrefixUtils.generatorKeyByPhone(passengerPhone);
 
         //根据key获取value
         String codeRedis = stringRedisTemplate.opsForValue().get(key);
@@ -111,8 +95,8 @@ public class VerificationCodeService {
         String token = JwtUtils.generatorToken(passengerPhone, IdentityConstant.PASSENGER_IDENTITY);
 
         //将token存储到redis当中
-        String tokenKey = generatorTokenKey(passengerPhone, IdentityConstant.PASSENGER_IDENTITY);
-        stringRedisTemplate.opsForValue().set(token,token,30,TimeUnit.DAYS);
+        String tokenKey = RedisPrefixUtils.generatorTokenKey(passengerPhone, IdentityConstant.PASSENGER_IDENTITY);
+        stringRedisTemplate.opsForValue().set(tokenKey,token,30,TimeUnit.DAYS);
 
         //响应
         TokenResponse tokenResponse = new TokenResponse();
