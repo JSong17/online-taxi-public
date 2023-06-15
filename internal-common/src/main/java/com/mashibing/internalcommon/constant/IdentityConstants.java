@@ -4,7 +4,7 @@ package com.mashibing.internalcommon.constant;
  *@author js
  *@version 1.0
  */
-public class IdentityConstant {
+public class IdentityConstants {
 
     //乘客身份
     public static final String PASSENGER_IDENTITY = "1";

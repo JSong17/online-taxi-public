@@ -24,8 +24,8 @@ public class RedisPrefixUtils {
     /*
      * 根据手机号何身份标识，生成token
      * */
-    public static String generatorTokenKey(String phone,String identity){
-        return  tokenPrefix + phone + "-" + identity;
+    public static String generatorTokenKey(String phone,String identity,String tokenType){
+        return  tokenPrefix + phone + "-" + identity +"-" + tokenType;
     }
 
 }
