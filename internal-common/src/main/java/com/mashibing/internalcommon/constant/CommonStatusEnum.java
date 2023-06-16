@@ -13,6 +13,12 @@ public enum CommonStatusEnum {
     * */
     VERIFICATION_CODE_ERROR(1099,"验证码不正确"),
 
+
+    /*
+     * Token类提示：1100-1199
+     * */
+    Token_ERROR(1199,"token错误"),
+
     /*
     * 成功
     * */
@@ -20,8 +26,7 @@ public enum CommonStatusEnum {
     /*
     * 失败
     * */
-    FAIL(0,"fail")
-    ;
+    FAIL(0,"fail");
 
     @Getter
     private int code;
