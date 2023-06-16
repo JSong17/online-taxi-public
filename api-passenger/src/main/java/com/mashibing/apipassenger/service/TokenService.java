@@ -37,7 +37,7 @@ public class TokenService {
         String identity = tokenResult.getIdentity();
 
         //去读取redis中 的refreshToken
-        String refreshTokenKey = JwtUtils.generatorToken(phone, identity, TokenConstants.REFRESH_TOKEN_TYPE);
+        String refreshTokenKey = RedisPrefixUtils.generatorTokenKey(phone, identity, TokenConstants.REFRESH_TOKEN_TYPE);
         String refreshTokenRedis = stringRedisTemplate.opsForValue().get(refreshTokenKey);
 
         //校验refreshToken
@@ -54,6 +54,9 @@ public class TokenService {
 
         stringRedisTemplate.opsForValue().set(accessTokenKey,accessToken,30, TimeUnit.DAYS);
         stringRedisTemplate.opsForValue().set(refreshTokenKey,refreshToken,31,TimeUnit.DAYS);
+
+
+
 
         //响应
         TokenResponse tokenResponse = new TokenResponse();

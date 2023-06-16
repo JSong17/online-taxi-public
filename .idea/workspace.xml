@@ -8,11 +8,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="原来 检验 验证码接口的 改造">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="刷新token代码编写">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/interceptor/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/interceptor/InterceptorConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/interceptor/JwtInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/interceptor/JwtInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/constant/CommonStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/constant/CommonStatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/VerificationCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/VerificationCodeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/util/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/util/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/constant/CommonStatusEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/constant/CommonStatusEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/util/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/util/JwtUtils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,17 +103,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ApiPassengerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="api-passenger" />
       <extension name="coverage">
@@ -163,7 +156,9 @@
       <workItem from="1686649479839" duration="13549000" />
       <workItem from="1686734566594" duration="8608000" />
       <workItem from="1686830680889" duration="7972000" />
-      <workItem from="1686908867751" duration="2567000" />
+      <workItem from="1686908867751" duration="5147000" />
+      <workItem from="1686922864972" duration="328000" />
+      <workItem from="1686923586501" duration="3945000" />
     </task>
     <task id="LOCAL-00001" summary="api-passenger获取验证码">
       <created>1686244783834</created>
@@ -354,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686850957379</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="刷新token代码编写">
+      <created>1686916325706</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1686916325706</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +426,8 @@
     <MESSAGE value="token存储到redis" />
     <MESSAGE value="从redis中读取token,并校验" />
     <MESSAGE value="原来 检验 验证码接口的 改造" />
-    <option name="LAST_COMMIT_MESSAGE" value="原来 检验 验证码接口的 改造" />
+    <MESSAGE value="刷新token代码编写" />
+    <option name="LAST_COMMIT_MESSAGE" value="刷新token代码编写" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1686295611472">
@@ -455,62 +458,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1293" height="282" key="GridCell.Tab.0.bottom" timestamp="1686850978709">
+    <state width="1293" height="295" key="GridCell.Tab.0.bottom" timestamp="1686927349267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686850978709" />
-    <state width="1293" height="282" key="GridCell.Tab.0.center" timestamp="1686850978709">
+    <state width="1293" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686927349267" />
+    <state width="1293" height="295" key="GridCell.Tab.0.center" timestamp="1686927349267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686850978709" />
-    <state width="1293" height="282" key="GridCell.Tab.0.left" timestamp="1686850978709">
+    <state width="1293" height="295" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686927349267" />
+    <state width="1293" height="295" key="GridCell.Tab.0.left" timestamp="1686927349267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686850978709" />
-    <state width="1293" height="282" key="GridCell.Tab.0.right" timestamp="1686850978709">
+    <state width="1293" height="295" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686927349267" />
+    <state width="1293" height="295" key="GridCell.Tab.0.right" timestamp="1686927349267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686850978709" />
-    <state width="1293" height="282" key="GridCell.Tab.1.bottom" timestamp="1686850978709">
+    <state width="1293" height="295" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686927349267" />
+    <state width="1293" height="295" key="GridCell.Tab.1.bottom" timestamp="1686927349268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686850978709" />
-    <state width="1293" height="282" key="GridCell.Tab.1.center" timestamp="1686850978709">
+    <state width="1293" height="295" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686927349268" />
+    <state width="1293" height="295" key="GridCell.Tab.1.center" timestamp="1686927349268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686850978709" />
-    <state width="1293" height="282" key="GridCell.Tab.1.left" timestamp="1686850978709">
+    <state width="1293" height="295" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686927349268" />
+    <state width="1293" height="295" key="GridCell.Tab.1.left" timestamp="1686927349268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686850978709" />
-    <state width="1293" height="282" key="GridCell.Tab.1.right" timestamp="1686850978709">
+    <state width="1293" height="295" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686927349268" />
+    <state width="1293" height="295" key="GridCell.Tab.1.right" timestamp="1686927349268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686850978709" />
-    <state width="1293" height="282" key="GridCell.Tab.2.bottom" timestamp="1686850814839">
+    <state width="1293" height="295" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686927349268" />
+    <state width="1293" height="284" key="GridCell.Tab.2.bottom" timestamp="1686925768755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686850814839" />
-    <state width="1293" height="282" key="GridCell.Tab.2.center" timestamp="1686850814839">
+    <state width="1293" height="284" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686925768755" />
+    <state width="1293" height="284" key="GridCell.Tab.2.center" timestamp="1686925768755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686850814839" />
-    <state width="1293" height="282" key="GridCell.Tab.2.left" timestamp="1686850814839">
+    <state width="1293" height="284" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686925768755" />
+    <state width="1293" height="284" key="GridCell.Tab.2.left" timestamp="1686925768755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686850814839" />
-    <state width="1293" height="282" key="GridCell.Tab.2.right" timestamp="1686850814839">
+    <state width="1293" height="284" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686925768755" />
+    <state width="1293" height="284" key="GridCell.Tab.2.right" timestamp="1686925768755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686850814839" />
+    <state width="1293" height="284" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686925768755" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1686230426736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1686230426736" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686850964791">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686916509269">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686850964791" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686916509269" />
     <state x="662" y="118" width="596" height="804" key="find.popup" timestamp="1686230562976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -523,10 +526,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1686623061769" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1686815584819">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1686921776794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1686815584819" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1686921776794" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -535,6 +538,11 @@
           <url>file://$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/interceptor/JwtInterceptor.java</url>
           <line>32</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/TokenService.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
