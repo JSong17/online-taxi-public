@@ -8,13 +8,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="根据refreshtoken生成accesstoken综合测试">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/util/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/util/JwtUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-passenger-user/src/main/java/com/mashibing/servicepassengeruser/dto/PassengerUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-passenger-user/src/main/java/com/mashibing/servicepassengeruser/mapper/PassengerUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-passenger-user/src/main/java/com/mashibing/servicepassengeruser/mapper/PassengerUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-passenger-user/src/main/java/com/mashibing/servicepassengeruser/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-passenger-user/src/main/java/com/mashibing/servicepassengeruser/service/UserService.java" afterDir="false" />
-    </list>
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="查询乘客信息，api-passenger股价代码编写" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,7 +160,7 @@
       <workItem from="1686830680889" duration="7972000" />
       <workItem from="1686908867751" duration="5147000" />
       <workItem from="1686922864972" duration="328000" />
-      <workItem from="1686923586501" duration="7728000" />
+      <workItem from="1686923586501" duration="8584000" />
     </task>
     <task id="LOCAL-00001" summary="api-passenger获取验证码">
       <created>1686244783834</created>
@@ -371,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686927760372</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="查询乘客信息，api-passenger股价代码编写">
+      <created>1686975182069</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1686975182080</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +444,8 @@
     <MESSAGE value="原来 检验 验证码接口的 改造" />
     <MESSAGE value="刷新token代码编写" />
     <MESSAGE value="根据refreshtoken生成accesstoken综合测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="根据refreshtoken生成accesstoken综合测试" />
+    <MESSAGE value="查询乘客信息，api-passenger股价代码编写" />
+    <option name="LAST_COMMIT_MESSAGE" value="查询乘客信息，api-passenger股价代码编写" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1686295611472">
@@ -530,10 +532,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1686230426736" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686931012672">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686975184210">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686931012672" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686975184210" />
     <state x="662" y="118" width="596" height="804" key="find.popup" timestamp="1686230562976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
