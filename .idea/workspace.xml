@@ -8,8 +8,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="api-passenger通过service-passenger-user实现 根据手机号查询用户信息">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="预估价格 api-passenger骨架编写">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +165,7 @@
       <workItem from="1686923586501" duration="11039000" />
       <workItem from="1686986891081" duration="2798000" />
       <workItem from="1686994597725" duration="2187000" />
-      <workItem from="1687074455546" duration="1293000" />
+      <workItem from="1687074455546" duration="2080000" />
     </task>
     <task id="LOCAL-00001" summary="api-passenger获取验证码">
       <created>1686244783834</created>
@@ -398,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686996338765</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="预估价格 api-passenger骨架编写">
+      <created>1687075866416</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1687075866416</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +454,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="api-passenger配置nacos" />
     <MESSAGE value="创建了sevice-verificationcode&amp;注册到了nacos" />
     <MESSAGE value="api-passenger通过feign的方式，调用sevice-verificationcode，获取验证码完成" />
     <MESSAGE value="乘客api,发送验证码服务完成" />
@@ -472,7 +478,8 @@
     <MESSAGE value="查询乘客信息，api-passenger股价代码编写" />
     <MESSAGE value="service-passenger-user根据手机号查询用户信息成功" />
     <MESSAGE value="api-passenger通过service-passenger-user实现 根据手机号查询用户信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="api-passenger通过service-passenger-user实现 根据手机号查询用户信息" />
+    <MESSAGE value="预估价格 api-passenger骨架编写" />
+    <option name="LAST_COMMIT_MESSAGE" value="预估价格 api-passenger骨架编写" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1686295611472">
@@ -511,38 +518,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1293" height="882" key="GridCell.Tab.0.bottom" timestamp="1687002354703">
+    <state width="1293" height="221" key="GridCell.Tab.0.bottom" timestamp="1687075883703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="882" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354703" />
-    <state width="1293" height="882" key="GridCell.Tab.0.center" timestamp="1687002354702">
+    <state width="1293" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1687075883703" />
+    <state width="1293" height="221" key="GridCell.Tab.0.center" timestamp="1687075883703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="882" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354702" />
-    <state width="1293" height="882" key="GridCell.Tab.0.left" timestamp="1687002354701">
+    <state width="1293" height="221" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1687075883703" />
+    <state width="1293" height="221" key="GridCell.Tab.0.left" timestamp="1687075883703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="882" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354701" />
-    <state width="1293" height="882" key="GridCell.Tab.0.right" timestamp="1687002354702">
+    <state width="1293" height="221" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1687075883703" />
+    <state width="1293" height="221" key="GridCell.Tab.0.right" timestamp="1687075883703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="882" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354702" />
-    <state width="1293" height="882" key="GridCell.Tab.1.bottom" timestamp="1687002354703">
+    <state width="1293" height="221" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1687075883703" />
+    <state width="1293" height="221" key="GridCell.Tab.1.bottom" timestamp="1687075883704">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="882" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354703" />
-    <state width="1293" height="882" key="GridCell.Tab.1.center" timestamp="1687002354703">
+    <state width="1293" height="221" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1687075883704" />
+    <state width="1293" height="221" key="GridCell.Tab.1.center" timestamp="1687075883704">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="882" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354703" />
-    <state width="1293" height="882" key="GridCell.Tab.1.left" timestamp="1687002354703">
+    <state width="1293" height="221" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1687075883704" />
+    <state width="1293" height="221" key="GridCell.Tab.1.left" timestamp="1687075883703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="882" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354703" />
-    <state width="1293" height="882" key="GridCell.Tab.1.right" timestamp="1687002354703">
+    <state width="1293" height="221" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1687075883703" />
+    <state width="1293" height="221" key="GridCell.Tab.1.right" timestamp="1687075883704">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="882" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354703" />
+    <state width="1293" height="221" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1687075883704" />
     <state width="1293" height="339" key="GridCell.Tab.2.bottom" timestamp="1686992345469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -563,18 +570,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1686230426736" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686996368072">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1687075914693">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686996368072" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1687075914693" />
     <state x="662" y="118" width="596" height="804" key="find.popup" timestamp="1686230562976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="118" width="596" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1686230562976" />
-    <state x="91" y="336" width="1251" height="513" key="new project wizard" timestamp="1686370519771">
+    <state x="91" y="336" width="1251" height="513" key="new project wizard" timestamp="1687077241771">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="91" y="336" width="1251" height="513" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1686370519771" />
+    <state x="91" y="336" width="1251" height="513" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1687077241771" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1686623061769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
