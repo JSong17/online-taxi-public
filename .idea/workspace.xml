@@ -8,12 +8,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="service-passenger-user根据手机号查询用户信息成功">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="api-passenger通过service-passenger-user实现 根据手机号查询用户信息">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/remote/ServicePassengerUserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/remote/ServicePassengerUserClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/constant/CommonStatusEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/constant/CommonStatusEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-passenger-user/src/main/java/com/mashibing/servicepassengeruser/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-passenger-user/src/main/java/com/mashibing/servicepassengeruser/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +96,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApiPassengerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="api-passenger" />
       <extension name="coverage">
@@ -157,7 +164,8 @@
       <workItem from="1686922864972" duration="328000" />
       <workItem from="1686923586501" duration="11039000" />
       <workItem from="1686986891081" duration="2798000" />
-      <workItem from="1686994597725" duration="1490000" />
+      <workItem from="1686994597725" duration="2187000" />
+      <workItem from="1687074455546" duration="1293000" />
     </task>
     <task id="LOCAL-00001" summary="api-passenger获取验证码">
       <created>1686244783834</created>
@@ -383,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686992519074</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="api-passenger通过service-passenger-user实现 根据手机号查询用户信息">
+      <created>1686996338764</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1686996338765</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +447,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="api-passenger获取验证码" />
     <MESSAGE value="api-passenger配置nacos" />
     <MESSAGE value="创建了sevice-verificationcode&amp;注册到了nacos" />
     <MESSAGE value="api-passenger通过feign的方式，调用sevice-verificationcode，获取验证码完成" />
@@ -457,7 +471,8 @@
     <MESSAGE value="根据refreshtoken生成accesstoken综合测试" />
     <MESSAGE value="查询乘客信息，api-passenger股价代码编写" />
     <MESSAGE value="service-passenger-user根据手机号查询用户信息成功" />
-    <option name="LAST_COMMIT_MESSAGE" value="service-passenger-user根据手机号查询用户信息成功" />
+    <MESSAGE value="api-passenger通过service-passenger-user实现 根据手机号查询用户信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="api-passenger通过service-passenger-user实现 根据手机号查询用户信息" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1686295611472">
@@ -496,38 +511,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1293" height="339" key="GridCell.Tab.0.bottom" timestamp="1686996201451">
+    <state width="1293" height="882" key="GridCell.Tab.0.bottom" timestamp="1687002354703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686996201451" />
-    <state width="1293" height="339" key="GridCell.Tab.0.center" timestamp="1686996201451">
+    <state width="1293" height="882" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354703" />
+    <state width="1293" height="882" key="GridCell.Tab.0.center" timestamp="1687002354702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="339" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686996201451" />
-    <state width="1293" height="339" key="GridCell.Tab.0.left" timestamp="1686996201451">
+    <state width="1293" height="882" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354702" />
+    <state width="1293" height="882" key="GridCell.Tab.0.left" timestamp="1687002354701">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="339" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686996201451" />
-    <state width="1293" height="339" key="GridCell.Tab.0.right" timestamp="1686996201451">
+    <state width="1293" height="882" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354701" />
+    <state width="1293" height="882" key="GridCell.Tab.0.right" timestamp="1687002354702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="339" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686996201451" />
-    <state width="1293" height="339" key="GridCell.Tab.1.bottom" timestamp="1686996201452">
+    <state width="1293" height="882" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354702" />
+    <state width="1293" height="882" key="GridCell.Tab.1.bottom" timestamp="1687002354703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="339" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686996201452" />
-    <state width="1293" height="339" key="GridCell.Tab.1.center" timestamp="1686996201452">
+    <state width="1293" height="882" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354703" />
+    <state width="1293" height="882" key="GridCell.Tab.1.center" timestamp="1687002354703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="339" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686996201452" />
-    <state width="1293" height="339" key="GridCell.Tab.1.left" timestamp="1686996201451">
+    <state width="1293" height="882" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354703" />
+    <state width="1293" height="882" key="GridCell.Tab.1.left" timestamp="1687002354703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="339" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686996201451" />
-    <state width="1293" height="339" key="GridCell.Tab.1.right" timestamp="1686996201452">
+    <state width="1293" height="882" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354703" />
+    <state width="1293" height="882" key="GridCell.Tab.1.right" timestamp="1687002354703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="339" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686996201452" />
+    <state width="1293" height="882" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1687002354703" />
     <state width="1293" height="339" key="GridCell.Tab.2.bottom" timestamp="1686992345469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -548,10 +563,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1686230426736" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686992643158">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1686996368072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686992643158" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1686996368072" />
     <state x="662" y="118" width="596" height="804" key="find.popup" timestamp="1686230562976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
