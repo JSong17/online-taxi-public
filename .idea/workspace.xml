@@ -8,12 +8,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="service-map骨架代码编写">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-map/src/main/java/com/mashibing/servicemap/ServiceMapApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-map/src/main/java/com/mashibing/servicemap/ServiceMapApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-map/src/main/java/com/mashibing/servicemap/service/DirectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-map/src/main/java/com/mashibing/servicemap/service/DirectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-map/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-map/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-map/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-map/target/classes/application.yml" afterDir="false" />
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="调用地图接口获取路径规划信息">
+      <change beforePath="$PROJECT_DIR$/service-map/target/classes/com/mashibing/servicemap/ServiceMapApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-map/target/classes/com/mashibing/servicemap/ServiceMapApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +185,7 @@
       <workItem from="1687074455546" duration="2174000" />
       <workItem from="1687089292712" duration="2676000" />
       <workItem from="1687093348378" duration="6602000" />
-      <workItem from="1687142589043" duration="2933000" />
+      <workItem from="1687142589043" duration="3242000" />
     </task>
     <task id="LOCAL-00001" summary="api-passenger获取验证码">
       <created>1686244783834</created>
@@ -457,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687097871893</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="调用地图接口获取路径规划信息">
+      <created>1687146291478</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1687146291478</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +509,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="校验验证码" />
     <MESSAGE value="创建项目service-passenger-user" />
     <MESSAGE value="service-passenger-user，登录or注册用户骨架编写完成" />
     <MESSAGE value="根据手机号查询用户信息" />
@@ -531,7 +533,8 @@
     <MESSAGE value="service-price骨架编写完成" />
     <MESSAGE value="service-map项目创建" />
     <MESSAGE value="service-map骨架代码编写" />
-    <option name="LAST_COMMIT_MESSAGE" value="service-map骨架代码编写" />
+    <MESSAGE value="调用地图接口获取路径规划信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="调用地图接口获取路径规划信息" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1687095006908">
