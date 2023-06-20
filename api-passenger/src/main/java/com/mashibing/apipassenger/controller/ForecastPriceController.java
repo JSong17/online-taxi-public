@@ -1,4 +1,5 @@
 package com.mashibing.apipassenger.controller;
+import com.mashibing.apipassenger.remote.ServicePriceClient;
 import com.mashibing.apipassenger.service.ForecastPriceService;
 import com.mashibing.internalcommon.dto.ResponseResult;
 import com.mashibing.internalcommon.request.ForecastPriceDTO;
@@ -17,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 public class ForecastPriceController {
+
+
 
     @Autowired
     ForecastPriceService forecastPriceService;
