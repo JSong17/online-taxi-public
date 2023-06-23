@@ -6,6 +6,8 @@ import com.mashibing.serviceDriverUser.mapper.DriverUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+
 /*
  *@author js
  *@version 1.0
@@ -19,6 +21,16 @@ public class DriverUserService {
     public ResponseResult testGetDriverUser(){
         DriverUser driverUser = driverUserMapper.selectById(1);
         return ResponseResult.success(driverUser);
+    }
+
+    public ResponseResult addDriverUser(DriverUser driverUser){
+        LocalDateTime now = LocalDateTime.now();
+        driverUser.setGmtCreate(now);
+        driverUser.setGmtModified(now);
+
+
+        driverUserMapper.insert(driverUser);
+        return ResponseResult.success("");
     }
 
 }
