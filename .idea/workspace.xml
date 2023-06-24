@@ -8,12 +8,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="自定义生成car表对应的代码">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="api-boss添加车辆">
+      <change afterPath="$PROJECT_DIR$/api-boss/src/main/java/com/mashibing/apiBoss/service/CarService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/constant/DriverCarConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/dto/DriverCarBindingRelationship.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/controller/DriverCarBindingRelationshipController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/mapper/DriverCarBindingRelationshipMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/mapper/DriverCarBindingRelationshipMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/service/DriverCarBindingRelationshipMapperService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-driver-user/target/classes/com/mashibing/serviceDriverUser/generator/MysqlGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-boss/src/main/java/com/mashibing/apiBoss/controller/DriverUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-boss/src/main/java/com/mashibing/apiBoss/controller/DriverUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-boss/src/main/java/com/mashibing/apiBoss/remote/ServiceDriverUserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-boss/src/main/java/com/mashibing/apiBoss/remote/ServiceDriverUserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-boss/target/classes/com/mashibing/apiBoss/controller/DriverUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-boss/target/classes/com/mashibing/apiBoss/controller/DriverUserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-boss/target/classes/com/mashibing/apiBoss/remote/ServiceDriverUserClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-boss/target/classes/com/mashibing/apiBoss/remote/ServiceDriverUserClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/constant/CommonStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/constant/CommonStatusEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/dto/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/dto/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/constant/CommonStatusEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/constant/CommonStatusEnum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/controller/CarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/generator/MysqlGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/generator/MysqlGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/service/CarService.java" afterDir="false" />
@@ -244,14 +255,7 @@
       <workItem from="1687333448295" duration="13065000" />
       <workItem from="1687453605591" duration="5336000" />
       <workItem from="1687504498690" duration="2342000" />
-      <workItem from="1687507757677" duration="23292000" />
-    </task>
-    <task id="LOCAL-00013" summary="根据手机号查询用户信息">
-      <created>1686576791107</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1686576791107</updated>
+      <workItem from="1687507757677" duration="23621000" />
     </task>
     <task id="LOCAL-00014" summary="插入用户">
       <created>1686650809975</created>
@@ -589,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687579669327</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="api-boss添加车辆">
+      <created>1687608660702</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1687608660702</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,7 +649,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="service-passenger-user根据手机号查询用户信息成功" />
     <MESSAGE value="api-passenger通过service-passenger-user实现 根据手机号查询用户信息" />
     <MESSAGE value="预估价格 api-passenger骨架编写" />
     <MESSAGE value="service-price项目创建" />
@@ -663,7 +673,8 @@
     <MESSAGE value="api-driver服务创建" />
     <MESSAGE value="api-driver调用service-driver-user修改司机信息" />
     <MESSAGE value="自定义生成car表对应的代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="自定义生成car表对应的代码" />
+    <MESSAGE value="api-boss添加车辆" />
+    <option name="LAST_COMMIT_MESSAGE" value="api-boss添加车辆" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1687599812558">
@@ -706,38 +717,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1584" height="374" key="GridCell.Tab.0.bottom" timestamp="1687601606427">
+    <state width="1584" height="374" key="GridCell.Tab.0.bottom" timestamp="1687608361102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1584" height="374" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1687601606427" />
-    <state width="1584" height="374" key="GridCell.Tab.0.center" timestamp="1687601606427">
+    <state width="1584" height="374" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1687608361102" />
+    <state width="1584" height="374" key="GridCell.Tab.0.center" timestamp="1687608361101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1584" height="374" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1687601606427" />
-    <state width="1584" height="374" key="GridCell.Tab.0.left" timestamp="1687601606427">
+    <state width="1584" height="374" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1687608361101" />
+    <state width="1584" height="374" key="GridCell.Tab.0.left" timestamp="1687608361101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1584" height="374" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1687601606427" />
-    <state width="1584" height="374" key="GridCell.Tab.0.right" timestamp="1687601606427">
+    <state width="1584" height="374" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1687608361101" />
+    <state width="1584" height="374" key="GridCell.Tab.0.right" timestamp="1687608361102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1584" height="374" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1687601606427" />
-    <state width="1584" height="374" key="GridCell.Tab.1.bottom" timestamp="1687601606427">
+    <state width="1584" height="374" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1687608361102" />
+    <state width="1584" height="374" key="GridCell.Tab.1.bottom" timestamp="1687608361102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1584" height="374" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1687601606427" />
-    <state width="1584" height="374" key="GridCell.Tab.1.center" timestamp="1687601606427">
+    <state width="1584" height="374" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1687608361102" />
+    <state width="1584" height="374" key="GridCell.Tab.1.center" timestamp="1687608361102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1584" height="374" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1687601606427" />
-    <state width="1584" height="374" key="GridCell.Tab.1.left" timestamp="1687601606427">
+    <state width="1584" height="374" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1687608361102" />
+    <state width="1584" height="374" key="GridCell.Tab.1.left" timestamp="1687608361102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1584" height="374" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1687601606427" />
-    <state width="1584" height="374" key="GridCell.Tab.1.right" timestamp="1687601606427">
+    <state width="1584" height="374" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1687608361102" />
+    <state width="1584" height="374" key="GridCell.Tab.1.right" timestamp="1687608361102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1584" height="374" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1687601606427" />
+    <state width="1584" height="374" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1687608361102" />
     <state width="1584" height="374" key="GridCell.Tab.2.bottom" timestamp="1687507021895">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -758,10 +769,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1686230426736" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1687579670976">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1687608663046">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1687579670976" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1687608663046" />
     <state x="502" y="249" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1687268711050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
