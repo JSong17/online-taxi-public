@@ -1,10 +1,12 @@
 package com.mashibing.apiDriver.service;
 
 import com.mashibing.apiDriver.remote.ServiceDriverUserClient;
+import com.mashibing.apiDriver.remote.ServiceVerificationcodeClient;
 import com.mashibing.internalcommon.constant.CommonStatusEnum;
 import com.mashibing.internalcommon.constant.DriverCarConstants;
 import com.mashibing.internalcommon.dto.ResponseResult;
 import com.mashibing.internalcommon.response.DriverUserExistsResponse;
+import com.mashibing.internalcommon.response.NumberCodeResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +22,9 @@ public class VerificationCodeService {
     @Autowired
     ServiceDriverUserClient serviceDriverUserClient;
 
+    @Autowired
+    ServiceVerificationcodeClient serviceVerificationcodeClient;
+
     public ResponseResult checkAndsendVerificationCode(String driverPhone){
         //查询service-driver-user，该手机号的司机是否存在
         ResponseResult<DriverUserExistsResponse> driverUserExistsResponseResponseResult = serviceDriverUserClient.checkDriver(driverPhone);
@@ -30,6 +35,10 @@ public class VerificationCodeService {
         }
         log.info(driverPhone+ "的司机存在");
         //获取验证码
+        ResponseResult<NumberCodeResponse> numberCodeResult = serviceVerificationcodeClient.getNumberCode(6);
+        NumberCodeResponse numberCodeResponse = numberCodeResult.getData();
+        int numberCode = numberCodeResponse.getNumberCode();
+        log.info("验证码： " + numberCode);
 
         //调用第三方发生的验证码
 
