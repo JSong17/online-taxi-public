@@ -1,0 +1,19 @@
+package com.mashibing.internalcommon.constant;
+
+/*
+ *@author js
+ *@version 1.0
+ */
+public class DriverCarConstants {
+
+    /*
+    * 司机车辆关系状态：绑定
+    * */
+    public static int DRIVER_CAR_BIND = 1;
+
+    /*
+    * 司机车辆关系状态：解绑
+    * */
+    public static int DRIVER_CAR_UNBIND = 2;
+
+}
