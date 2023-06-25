@@ -8,7 +8,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="司机通过api-driver发生验证码 完结">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="司机车辆关系总">
+      <change afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/interceptor/InterceptorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/interceptor/JwtInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/dto/DriverUserWorkStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/controller/DriverUserWorkStatusController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/mapper/DriverUserWorkStatusMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/mapper/DriverUserWorkStatusMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/service/DriverUserWorkStatusService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/controller/VerificationCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/controller/VerificationCodeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/service/VerificationCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/service/VerificationCodeService.java" afterDir="false" />
@@ -247,7 +255,7 @@
       <workItem from="1687333448295" duration="13065000" />
       <workItem from="1687453605591" duration="5336000" />
       <workItem from="1687504498690" duration="2342000" />
-      <workItem from="1687507757677" duration="42411000" />
+      <workItem from="1687507757677" duration="42734000" />
     </task>
     <task id="LOCAL-00021" summary="token 工具类完成">
       <created>1686746820269</created>
@@ -641,7 +649,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="调用地图接口获取路径规划信息" />
     <MESSAGE value="service-price调用service-map" />
     <MESSAGE value="读取计价规则" />
     <MESSAGE value="service-price计价计算完成" />
@@ -666,7 +673,8 @@
     <MESSAGE value="api-driver 调用service-driver-user,校验对应的号码的司机是否存在" />
     <MESSAGE value="api-driver 调用service-driver-user服务，获取验证码" />
     <MESSAGE value="司机通过api-driver发生验证码 完结" />
-    <option name="LAST_COMMIT_MESSAGE" value="司机通过api-driver发生验证码 完结" />
+    <MESSAGE value="司机车辆关系总" />
+    <option name="LAST_COMMIT_MESSAGE" value="司机车辆关系总" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1687599812558">
@@ -761,10 +769,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1686230426736" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1687662441400">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1687679512081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1687662441400" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1687679512081" />
     <state x="502" y="249" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1687268711050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
