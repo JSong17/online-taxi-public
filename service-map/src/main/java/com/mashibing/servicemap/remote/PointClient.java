@@ -1,6 +1,5 @@
 package com.mashibing.servicemap.remote;
 
-import cn.hutool.core.util.URLUtil;
 import com.mashibing.internalcommon.constant.AmapConfigConstants;
 import com.mashibing.internalcommon.dto.PointDTO;
 import com.mashibing.internalcommon.dto.ResponseResult;
@@ -50,7 +49,6 @@ public class PointClient {
         PointDTO[] points = pointRequest.getPoints();
         url.append("%5B");
 
-        String normalize = URLUtil.normalize(url.toString());
 
         for (PointDTO p : points) {
             url.append("%7B");
