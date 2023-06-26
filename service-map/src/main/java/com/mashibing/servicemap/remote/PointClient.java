@@ -1,5 +1,6 @@
 package com.mashibing.servicemap.remote;
 
+import cn.hutool.core.util.URLUtil;
 import com.mashibing.internalcommon.constant.AmapConfigConstants;
 import com.mashibing.internalcommon.dto.PointDTO;
 import com.mashibing.internalcommon.dto.ResponseResult;
@@ -11,6 +12,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import java.net.URI;
 
 /*
  *@author js
@@ -30,6 +33,7 @@ public class PointClient {
 
     public ResponseResult upload(PointRequest pointRequest){
 
+
         //组装请求的url
         StringBuilder url = new StringBuilder();
         url.append(AmapConfigConstants.POINT_UPLOAD);
@@ -45,6 +49,9 @@ public class PointClient {
         url.append("points=");
         PointDTO[] points = pointRequest.getPoints();
         url.append("%5B");
+
+        String normalize = URLUtil.normalize(url.toString());
+
         for (PointDTO p : points) {
             url.append("%7B");
             String locatetime = p.getLocatetime();
@@ -64,7 +71,7 @@ public class PointClient {
 
         System.out.println("高德地图请求：" + url.toString());
 
-        ResponseEntity<String> stringResponseEntity = restTemplate.postForEntity(url.toString(), null, String.class);
+        ResponseEntity<String> stringResponseEntity = restTemplate.postForEntity(URI.create(url.toString()), null, String.class);
         System.out.println("高德地图响应："+ stringResponseEntity.getBody());
 
         return ResponseResult.success();
