@@ -67,10 +67,10 @@ public class PointClient {
         }
         url.append("%5D");
 
-        System.out.println("高德地图请求：" + url.toString());
+        System.out.println("上传位置请求：" + url.toString());
 
         ResponseEntity<String> stringResponseEntity = restTemplate.postForEntity(URI.create(url.toString()), null, String.class);
-        System.out.println("高德地图响应："+ stringResponseEntity.getBody());
+        System.out.println("上传位置响应："+ stringResponseEntity.getBody());
 
         return ResponseResult.success();
 

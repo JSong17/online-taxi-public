@@ -18,7 +18,7 @@ import javax.xml.ws.Response;
 public interface ServiceMapClient {
 
     @RequestMapping(method = RequestMethod.POST,value = "/terminal/add")
-    public ResponseResult<TerminalResponse> addTerminal(@RequestParam String name);
+    public ResponseResult<TerminalResponse> addTerminal(@RequestParam String name,@RequestParam String desc);
 
     @RequestMapping(method = RequestMethod.POST,value = "/track/add")
     public ResponseResult<TrackResponse> addTrack(@RequestParam String tid);
