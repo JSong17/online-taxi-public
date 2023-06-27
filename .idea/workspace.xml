@@ -8,9 +8,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="api-driver上传位置功能，获取tid和trid,完成">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="司机上传轨迹点完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/service/PointService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/service/PointService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,8 +191,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ServiceDriverUserApplication" />
         <item itemvalue="Spring Boot.ServiceMapApplication" />
+        <item itemvalue="Spring Boot.ServiceDriverUserApplication" />
         <item itemvalue="Spring Boot.ApiDriverApplication" />
         <item itemvalue="Application.MysqlGenerator" />
         <item itemvalue="Spring Boot.ApiPassengerApplication" />
@@ -240,21 +239,7 @@
       <workItem from="1687759612692" duration="13976000" />
       <workItem from="1687784958834" duration="3603000" />
       <workItem from="1687788847315" duration="2391000" />
-      <workItem from="1687866321071" duration="1922000" />
-    </task>
-    <task id="LOCAL-00032" summary="service-passenger-user根据手机号查询用户信息成功">
-      <created>1686992519074</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1686992519074</updated>
-    </task>
-    <task id="LOCAL-00033" summary="api-passenger通过service-passenger-user实现 根据手机号查询用户信息">
-      <created>1686996338764</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1686996338765</updated>
+      <workItem from="1687866321071" duration="3159000" />
     </task>
     <task id="LOCAL-00034" summary="预估价格 api-passenger骨架编写">
       <created>1687075866416</created>
@@ -585,7 +570,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687790028881</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="司机上传轨迹点完成">
+      <created>1687870931112</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1687870931113</updated>
+    </task>
+    <task id="LOCAL-00082" summary="司机上传轨迹点完成">
+      <created>1687870944741</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1687870944741</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,7 +633,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="地区字典获取成功入库" />
     <MESSAGE value="service-driver-user操作数据库骨架完成" />
     <MESSAGE value="service-driver-user插入司机完成" />
     <MESSAGE value="service-driver-user 注册到nacos" />
@@ -659,7 +657,8 @@
     <MESSAGE value="车辆管理，初始化轨迹完成" />
     <MESSAGE value="service-map访问高德地图上传轨迹 -" />
     <MESSAGE value="api-driver上传位置功能，获取tid和trid,完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="api-driver上传位置功能，获取tid和trid,完成" />
+    <MESSAGE value="司机上传轨迹点完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="司机上传轨迹点完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1687599812558">
@@ -758,10 +757,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1686230426736" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1687790036626">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1687870946741">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1687790036626" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1687870946741" />
     <state x="763" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1687773446105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
