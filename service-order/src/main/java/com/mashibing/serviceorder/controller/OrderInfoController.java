@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/order")
 @Slf4j
 @MapperScan("com.mashibing.serviceorder.mapper")
-public class OrderController {
+public class OrderInfoController {
 
     @Autowired
     OrderInfoService orderInfoService;
