@@ -1,12 +1,14 @@
 package com.mashibing.serviceprice.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.mashibing.internalcommon.constant.CommonStatusEnum;
 import com.mashibing.internalcommon.dto.PriceRule;
 import com.mashibing.internalcommon.dto.ResponseResult;
 import com.mashibing.serviceprice.mapper.PriceRuleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.xml.ws.Response;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +28,7 @@ public class PriceRuleService {
         //拼接fareType
         String cityCode = priceRule.getCityCode();
         String vehicleType = priceRule.getVehicleType();
-        String fareType = cityCode + vehicleType;
+        String fareType = cityCode + "$" + vehicleType;
         priceRule.setFareType(fareType);
 
         //添加版本号
@@ -43,7 +45,46 @@ public class PriceRuleService {
         List<PriceRule> priceRules = priceRuleMapper.selectList(queryWrapper);
         Integer fareVersion = 0;
         if(priceRules.size()>0){
-            fareVersion = priceRules.get(0).getFareVersion();
+            return ResponseResult.fail(CommonStatusEnum.PRICE_RULE_EXISTS.getCode(),CommonStatusEnum.PRICE_RULE_EXISTS.getValue());
+        }
+        priceRule.setFareVersion(++fareVersion);
+
+        priceRuleMapper.insert(priceRule);
+        return ResponseResult.success();
+
+    }
+
+    public ResponseResult edit(PriceRule priceRule){
+
+        //拼接fareType
+        String cityCode = priceRule.getCityCode();
+        String vehicleType = priceRule.getVehicleType();
+        String fareType = cityCode + "$" + vehicleType;
+        priceRule.setFareType(fareType);
+
+
+        //问题1：增加了版本号，前面两个字段无法唯一确定一条记录，问题2：我最大的版本号，需要排序
+
+        QueryWrapper<PriceRule> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("city_code",cityCode);
+        queryWrapper.eq("vehicle_type", vehicleType);
+        queryWrapper.orderByDesc("fare_version");
+
+        List<PriceRule> priceRules = priceRuleMapper.selectList(queryWrapper);
+        Integer fareVersion = 0;
+        if(priceRules.size()>0){
+            PriceRule lastPriceRules = priceRules.get(0);
+            Double unitPricePerMile = lastPriceRules.getUnitPricePerMile();
+            Double unitPricePerMinute = lastPriceRules.getUnitPricePerMinute();
+            Double startFare = lastPriceRules.getStartFare();
+            Integer startMile = lastPriceRules.getStartMile();
+
+            if(unitPricePerMile.doubleValue() == priceRule.getUnitPricePerMile().doubleValue()
+            && unitPricePerMinute.doubleValue() == priceRule.getUnitPricePerMinute().doubleValue()
+            && startFare.doubleValue() == priceRule.getStartFare().doubleValue()
+            && startMile.intValue() == priceRule.getStartMile().doubleValue()){
+                return  ResponseResult.fail(CommonStatusEnum.PRICE_RULE_NOT_EDIT.getCode(),CommonStatusEnum.PRICE_RULE_NOT_EDIT.getValue());
+            }fareVersion = lastPriceRules.getFareVersion();
         }
         priceRule.setFareVersion(++fareVersion);
 
