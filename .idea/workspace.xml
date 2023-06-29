@@ -8,18 +8,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="计价规则，城市编发和车型参数的传递改造">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="service-price判断计价规则是否是最新版本">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/ForecastPriceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-passenger/src/main/java/com/mashibing/apipassenger/service/ForecastPriceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/response/ForecastPriceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/response/ForecastPriceResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/request/ForecastPriceDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/request/ForecastPriceDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/response/ForecastPriceResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/response/ForecastPriceResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-price/src/main/java/com/mashibing/serviceprice/controller/PriceRuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-price/src/main/java/com/mashibing/serviceprice/controller/PriceRuleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-price/src/main/java/com/mashibing/serviceprice/service/ForecastPriceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-price/src/main/java/com/mashibing/serviceprice/service/ForecastPriceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-price/src/main/java/com/mashibing/serviceprice/service/PriceRuleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-price/src/main/java/com/mashibing/serviceprice/service/PriceRuleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-price/target/classes/com/mashibing/serviceprice/controller/PriceRuleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-price/target/classes/com/mashibing/serviceprice/controller/PriceRuleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-price/target/classes/com/mashibing/serviceprice/service/ForecastPriceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-price/target/classes/com/mashibing/serviceprice/service/ForecastPriceService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-price/target/classes/com/mashibing/serviceprice/service/PriceRuleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-price/target/classes/com/mashibing/serviceprice/service/PriceRuleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/constant/CommonStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/constant/CommonStatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-order/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-order/src/main/java/com/mashibing/serviceorder/ServiceOrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-order/src/main/java/com/mashibing/serviceorder/ServiceOrderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-order/src/main/java/com/mashibing/serviceorder/service/OrderInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-order/src/main/java/com/mashibing/serviceorder/service/OrderInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-order/target/classes/com/mashibing/serviceorder/service/OrderInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-order/target/classes/com/mashibing/serviceorder/service/OrderInfoService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -120,6 +115,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApiPassengerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="api-passenger" />
       <extension name="coverage">
@@ -197,11 +205,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ServiceOrderApplication" />
         <item itemvalue="Spring Boot.ServicePriceApplicaton" />
         <item itemvalue="Spring Boot.ApiPassengerApplication" />
         <item itemvalue="Spring Boot.ServiceMapApplication" />
         <item itemvalue="Application.MysqlGenerator (1)" />
-        <item itemvalue="Spring Boot.ServiceOrderApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -248,14 +256,7 @@
       <workItem from="1687866321071" duration="5529000" />
       <workItem from="1687923238282" duration="15426000" />
       <workItem from="1688011013128" duration="15004000" />
-      <workItem from="1688046262539" duration="995000" />
-    </task>
-    <task id="LOCAL-00046" summary="预估价格编写完成">
-      <created>1687270362933</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1687270362933</updated>
+      <workItem from="1688046262539" duration="2925000" />
     </task>
     <task id="LOCAL-00047" summary="拼装 地区 字典获取url">
       <created>1687320649157</created>
@@ -593,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688024454804</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="service-price判断计价规则是否是最新版本">
+      <created>1688047549631</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1688047549632</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,7 +650,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="自定义生成car表对应的代码" />
     <MESSAGE value="api-boss添加车辆" />
     <MESSAGE value="api-boss调用service-driver-user添加车辆" />
     <MESSAGE value="司机和车辆的 绑定和解绑的 调用" />
@@ -667,7 +674,8 @@
     <MESSAGE value="添加计价规则完成" />
     <MESSAGE value="计价规则添加，修改代码实现" />
     <MESSAGE value="计价规则，城市编发和车型参数的传递改造" />
-    <option name="LAST_COMMIT_MESSAGE" value="计价规则，城市编发和车型参数的传递改造" />
+    <MESSAGE value="service-price判断计价规则是否是最新版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="service-price判断计价规则是否是最新版本" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1687957393723">
@@ -714,38 +722,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1507" height="368" key="GridCell.Tab.0.bottom" timestamp="1688042848762">
+    <state width="1507" height="368" key="GridCell.Tab.0.bottom" timestamp="1688049131126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="368" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688042848762" />
-    <state width="1507" height="368" key="GridCell.Tab.0.center" timestamp="1688042848762">
+    <state width="1507" height="368" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688049131126" />
+    <state width="1507" height="368" key="GridCell.Tab.0.center" timestamp="1688049131126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="368" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688042848762" />
-    <state width="1507" height="368" key="GridCell.Tab.0.left" timestamp="1688042848762">
+    <state width="1507" height="368" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688049131126" />
+    <state width="1507" height="368" key="GridCell.Tab.0.left" timestamp="1688049131126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="368" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688042848762" />
-    <state width="1507" height="368" key="GridCell.Tab.0.right" timestamp="1688042848762">
+    <state width="1507" height="368" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688049131126" />
+    <state width="1507" height="368" key="GridCell.Tab.0.right" timestamp="1688049131126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="368" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688042848762" />
-    <state width="1507" height="368" key="GridCell.Tab.1.bottom" timestamp="1688042848763">
+    <state width="1507" height="368" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688049131126" />
+    <state width="1507" height="368" key="GridCell.Tab.1.bottom" timestamp="1688049131127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="368" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688042848763" />
-    <state width="1507" height="368" key="GridCell.Tab.1.center" timestamp="1688042848762">
+    <state width="1507" height="368" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688049131127" />
+    <state width="1507" height="368" key="GridCell.Tab.1.center" timestamp="1688049131127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="368" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688042848762" />
-    <state width="1507" height="368" key="GridCell.Tab.1.left" timestamp="1688042848762">
+    <state width="1507" height="368" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688049131127" />
+    <state width="1507" height="368" key="GridCell.Tab.1.left" timestamp="1688049131126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="368" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688042848762" />
-    <state width="1507" height="368" key="GridCell.Tab.1.right" timestamp="1688042848762">
+    <state width="1507" height="368" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688049131126" />
+    <state width="1507" height="368" key="GridCell.Tab.1.right" timestamp="1688049131127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="368" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688042848762" />
+    <state width="1507" height="368" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688049131127" />
     <state width="1507" height="368" key="GridCell.Tab.2.bottom" timestamp="1688042848609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -766,10 +774,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1686230426736" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1688024458353">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1688048875909">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688024458353" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688048875909" />
     <state x="763" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1687773446105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
