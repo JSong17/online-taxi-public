@@ -59,7 +59,7 @@ public class ForecastPriceService {
 
         QueryWrapper queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("city_code",cityCode);
-        queryWrapper.eq("vehicleType",vehicleType);
+        queryWrapper.eq("vehicle_type",vehicleType);
         queryWrapper.orderByDesc("fare_version");
 
         List<PriceRule> priceRules = priceRuleMapper.selectList(queryWrapper);
@@ -71,12 +71,16 @@ public class ForecastPriceService {
         PriceRule priceRule = priceRules.get(0);
 
         log.info("根据距离，时长和计价规则，计算价格");
+
         double price = getPrice(distance, duration, priceRule);
 
         ForecastPriceResponse forecastPriceResponse = new ForecastPriceResponse();
         forecastPriceResponse.setPrice(price);
         forecastPriceResponse.setCityCode(cityCode);
         forecastPriceResponse.setVehicleType(vehicleType);
+        forecastPriceResponse.setFareType(priceRule.getFareType());
+        forecastPriceResponse.setFareVersion(priceRule.getFareVersion());
+
         return ResponseResult.success(forecastPriceResponse);
     }
 
