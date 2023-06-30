@@ -52,7 +52,7 @@ public class PriceRuleController {
     /*
      * 判断该城市和对应的车型的计价规则是否存在
      * */
-    @GetMapping("/if-exists")
+    @PostMapping("/if-exists")
     public ResponseResult<Boolean> ifExists(@RequestBody PriceRule priceRule){
         return priceRuleService.ifExists(priceRule);
     }
