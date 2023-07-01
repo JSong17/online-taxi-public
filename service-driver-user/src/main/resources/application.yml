@@ -19,7 +19,7 @@ logging:
     com.baomidou.mybatisplus: debug
 
 mybatis-plus:
-  type-aliases-package: com.msb.entity
+#  type-aliases-package: com.msb.entity
   mapper-locations: classpath:mapper/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

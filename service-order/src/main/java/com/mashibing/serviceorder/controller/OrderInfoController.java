@@ -23,7 +23,6 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/order")
 @Slf4j
-@MapperScan("com.mashibing.serviceorder.mapper")
 public class OrderInfoController {
 
     @Autowired

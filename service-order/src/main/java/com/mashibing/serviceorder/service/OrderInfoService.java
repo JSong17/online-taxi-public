@@ -7,15 +7,23 @@ import com.mashibing.internalcommon.dto.OrderInfo;
 import com.mashibing.internalcommon.dto.PriceRule;
 import com.mashibing.internalcommon.dto.ResponseResult;
 import com.mashibing.internalcommon.request.OrderRequest;
+import com.mashibing.internalcommon.response.TerminalResponse;
 import com.mashibing.internalcommon.util.RedisPrefixUtils;
 import com.mashibing.serviceorder.mapper.OrderInfoMapper;
+import com.mashibing.serviceorder.remote.ServiceDriverUserClient;
+import com.mashibing.serviceorder.remote.ServiceMapClient;
 import com.mashibing.serviceorder.remote.ServicePriceClient;
+import lombok.extern.slf4j.Slf4j;
+import net.sf.json.JSONArray;
 import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /*
@@ -23,6 +31,7 @@ import java.util.concurrent.TimeUnit;
  *@version 1.0
  */
 @Service
+@Slf4j
 public class OrderInfoService {
 
     @Autowired
@@ -32,9 +41,19 @@ public class OrderInfoService {
     ServicePriceClient servicePriceClient;
 
     @Autowired
+    ServiceDriverUserClient serviceDriverUserClient;
+
+    @Autowired
     StringRedisTemplate stringRedisTemplate;
 
     public ResponseResult add(OrderRequest orderRequest){
+
+        ResponseResult<Boolean> availableDriver = serviceDriverUserClient.isAvailableDriver(orderRequest.getAddress());
+        log.info("测试城市是否有司机结果：" + availableDriver.getData());
+        if (!availableDriver.getData()){
+            return ResponseResult.fail(CommonStatusEnum.CITY_DRIVER_EMPTY.getCode(),CommonStatusEnum.CITY_DRIVER_EMPTY.getValue());
+        }
+
         //需要判断计价规则的版本是否为最新
         ResponseResult<Boolean> aNew = servicePriceClient.isNew(orderRequest.getFareType(), orderRequest.getFareVersion());
         if(!(aNew.getData())){
@@ -55,14 +74,64 @@ public class OrderInfoService {
         if(isOrderGoingon(orderRequest.getPassengerId()) > 0){
             return ResponseResult.fail(CommonStatusEnum.OROER_GOING_ON.getCode(),CommonStatusEnum.OROER_GOING_ON.getValue());
         }
-
+        //创建订单
         OrderInfo orderInfo = new OrderInfo();
 
         BeanUtils.copyProperties(orderRequest,orderInfo);
 
+        orderInfo.setOrderStatus(OrderConstants.ORDER_START);
+
+        LocalDateTime now = LocalDateTime.now();
+        orderInfo.setGmtCreate(now);
+        orderInfo.setGmtModified(now);
+
         orderInfoMapper.insert(orderInfo);
+
+        //派单dispatchRealTimeOrder
+        dispatchRealTimeOrder(orderInfo);
+
         return ResponseResult.success();
     }
+
+    @Autowired
+    ServiceMapClient serviceMapClient;
+
+    /*
+    * 实时订单派单逻辑
+    * */
+    public void dispatchRealTimeOrder(OrderInfo orderInfo){
+
+        //2km
+        String depLatitude = orderInfo.getDepLatitude();
+        String depLongitude = orderInfo.getDepLongitude();
+
+        String center = depLatitude + "," +depLongitude;
+
+        List<Integer> radiusList = new ArrayList<>();
+        radiusList.add(2000);
+        radiusList.add(4000);
+        radiusList.add(5000);
+
+        //搜索结果
+        ResponseResult<List<TerminalResponse>> listResponseResult = null;
+        for (int i = 0; i < radiusList.size(); i++) {
+            Integer radius = radiusList.get(i);
+            listResponseResult = serviceMapClient.terminalAroundSearch(center, radius);
+
+            log.info("在半径为" + radius + "的范围内，寻找车辆,结果是 " + JSONArray.fromObject(listResponseResult.getData()).toString());
+            //获得终端
+
+            //解析终端
+
+            //根据解析出来的终端，查询车辆信息
+
+            //找到符合的车辆，进行派单
+
+            //如果派单成功，则退出循环
+
+        }
+    }
+
 
     private boolean isPriceRuleExists(OrderRequest orderRequest){
         String fareType = orderRequest.getFareType();
