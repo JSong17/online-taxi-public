@@ -25,6 +25,9 @@ public class TestController {
     @Autowired
     OrderInfoMapper orderInfoMapper;
 
+    /*
+    * 测试派单逻辑
+    * */
     @GetMapping("/test-real-time-order/{orderId}")
     public String dispatchRealTimeOrder(@PathVariable("orderId") long orderId){
         OrderInfo orderInfo = orderInfoMapper.selectById(orderId);
