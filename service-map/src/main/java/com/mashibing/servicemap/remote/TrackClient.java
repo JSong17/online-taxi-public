@@ -4,6 +4,7 @@ import com.mashibing.internalcommon.constant.AmapConfigConstants;
 import com.mashibing.internalcommon.dto.ResponseResult;
 import com.mashibing.internalcommon.response.TerminalResponse;
 import com.mashibing.internalcommon.response.TrackResponse;
+import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import org.springframework.web.client.RestTemplate;
  *@version 1.0
  */
 @Service
+@Slf4j
 public class TrackClient {
 
     @Value("${amap.key}")
@@ -39,9 +41,11 @@ public class TrackClient {
         url.append("sid=" + amapSid);
         url.append("&");
         url.append("tid=" + tid);
+        log.info("高德地图创建轨迹请求：" + url);
 
         ResponseEntity<String> stringResponseEntity = restTemplate.postForEntity(url.toString(), null, String.class);
         String body = stringResponseEntity.getBody();
+        log.info("高德地图创建轨迹响应：" + body);
         JSONObject result = JSONObject.fromObject(body);
         JSONObject data = result.getJSONObject("data");
         //轨迹id

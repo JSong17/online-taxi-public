@@ -7,6 +7,7 @@ import com.mashibing.internalcommon.dto.OrderInfo;
 import com.mashibing.internalcommon.dto.PriceRule;
 import com.mashibing.internalcommon.dto.ResponseResult;
 import com.mashibing.internalcommon.request.OrderRequest;
+import com.mashibing.internalcommon.request.PriceRuleIsNewRequest;
 import com.mashibing.internalcommon.response.TerminalResponse;
 import com.mashibing.internalcommon.util.RedisPrefixUtils;
 import com.mashibing.serviceorder.mapper.OrderInfoMapper;
@@ -56,7 +57,10 @@ public class OrderInfoService {
         }
 
         //需要判断计价规则的版本是否为最新
-        ResponseResult<Boolean> aNew = servicePriceClient.isNew(orderRequest.getFareType(), orderRequest.getFareVersion());
+        PriceRuleIsNewRequest priceRuleIsNewRequest = new PriceRuleIsNewRequest();
+        priceRuleIsNewRequest.setFareType(orderRequest.getFareType());
+        priceRuleIsNewRequest.setFareVersion(orderRequest.getFareVersion());
+        ResponseResult<Boolean> aNew = servicePriceClient.isNew(priceRuleIsNewRequest);
         if(!(aNew.getData())){
             return ResponseResult.fail(CommonStatusEnum.PRICE_RULE_CHANGED.getCode(),CommonStatusEnum.PRICE_RULE_CHANGED.getValue());
         }
