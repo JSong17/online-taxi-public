@@ -107,7 +107,7 @@ public class OrderInfoService {
      * 实时订单派单逻辑
      * @param orderInfo
      */
-    public void dispatchRealTimeOrder(OrderInfo orderInfo){
+    public synchronized void dispatchRealTimeOrder(OrderInfo orderInfo){
 
         //2km
         String depLatitude = orderInfo.getDepLatitude();
@@ -163,7 +163,7 @@ public class OrderInfoService {
                     QueryWrapper<Car> queryWrapper = new QueryWrapper<>();
                     queryWrapper.eq("id",carId);
 
-
+                    //设置订单中和司机车辆相关的信息
                     //查询当前司机信息
                     orderInfo.setDriverId(driverId);
                     orderInfo.setDriverPhone(driverPhone);
