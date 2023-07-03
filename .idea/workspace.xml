@@ -8,11 +8,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="并发集群测试环境准备,及错误演示">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="并发派单问题，分布式锁Redission解决方案">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-order/src/main/java/com/mashibing/serviceorder/service/OrderInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-order/src/main/java/com/mashibing/serviceorder/service/OrderInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-order/target/classes/com/mashibing/serviceorder/service/OrderInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-order/target/classes/com/mashibing/serviceorder/service/OrderInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-order/src/main/java/com/mashibing/serviceorder/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-order/src/main/java/com/mashibing/serviceorder/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-order/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-order/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-order/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-order/target/classes/com/mashibing/serviceorder/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-order/target/classes/com/mashibing/serviceorder/config/RedisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/端口管理.md" beforeDir="false" afterPath="$PROJECT_DIR$/端口管理.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +113,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.service-order-8008">
+  <component name="RunManager" selected="Spring Boot.SseDriverClientWeb">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -146,19 +151,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceMapApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="service-map" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mashibing.servicemap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mashibing.servicemap.ServiceMapApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ServicePassengerUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="service-passenger-user" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.mashibing.servicepassengeruser.ServicePassengerUserApplication" />
@@ -182,6 +174,19 @@
     <configuration name="ServiceVerificationcodeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="service-verificationcode" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.mashibing.serviceverificationcode.ServiceVerificationcodeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SseDriverClientWeb" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="sse-driver-client-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mashibing.ssedriverclientweb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mashibing.ssedriverclientweb.SseDriverClientWeb" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -220,19 +225,19 @@
       <item itemvalue="Spring Boot.ServicePassengerUserApplication" />
       <item itemvalue="Spring Boot.ServiceVerificationcodeApplication" />
       <item itemvalue="Spring Boot.service-order-8008" />
-      <item itemvalue="Spring Boot.ServiceMapApplication" />
       <item itemvalue="Spring Boot.ServiceDriverUserApplication" />
       <item itemvalue="Spring Boot.ServicePriceApplicaton" />
       <item itemvalue="Spring Boot.service-order-8007" />
       <item itemvalue="Spring Boot.ApiPassengerApplication" />
+      <item itemvalue="Spring Boot.SseDriverClientWeb" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ApiPassengerApplication" />
+        <item itemvalue="Spring Boot.SseDriverClientWeb" />
         <item itemvalue="Spring Boot.service-order-8007" />
+        <item itemvalue="Spring Boot.ApiPassengerApplication" />
         <item itemvalue="Spring Boot.ServicePriceApplicaton" />
         <item itemvalue="Spring Boot.ServiceDriverUserApplication" />
-        <item itemvalue="Spring Boot.ServiceMapApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -287,14 +292,7 @@
       <workItem from="1688285383457" duration="5490000" />
       <workItem from="1688292404227" duration="2467000" />
       <workItem from="1688300416359" duration="971000" />
-      <workItem from="1688301591249" duration="26064000" />
-    </task>
-    <task id="LOCAL-00064" summary="司机和车辆的 绑定和解绑的 调用">
-      <created>1687612064592</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1687612064592</updated>
+      <workItem from="1688301591249" duration="28440000" />
     </task>
     <task id="LOCAL-00065" summary="api-driver 发送验证码骨架代码编写完成">
       <created>1687613558864</created>
@@ -632,7 +630,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688371917317</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="并发派单问题，分布式锁Redission解决方案">
+      <created>1688376013712</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1688376013760</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,7 +686,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="司机上传轨迹点完成" />
     <MESSAGE value="service-map,创建终端改造，增加desc字段" />
     <MESSAGE value="车辆创建终端改造成功，上传轨迹点成功，地图搜索成功" />
     <MESSAGE value="service-map集成终端搜索服务" />
@@ -706,13 +710,14 @@
     <MESSAGE value="经纬度修改成字符串，解析搜索车辆结果代码优化" />
     <MESSAGE value="单机解决实时订单并发问题" />
     <MESSAGE value="并发集群测试环境准备,及错误演示" />
-    <option name="LAST_COMMIT_MESSAGE" value="并发集群测试环境准备,及错误演示" />
+    <MESSAGE value="并发派单问题，分布式锁Redission解决方案" />
+    <option name="LAST_COMMIT_MESSAGE" value="并发派单问题，分布式锁Redission解决方案" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1688219947472">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1688378790335">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1688219947472" />
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1688378790335" />
     <state x="1015" y="368" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1688303332579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -761,38 +766,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1507" height="282" key="GridCell.Tab.0.bottom" timestamp="1688375884608">
+    <state width="1507" height="282" key="GridCell.Tab.0.bottom" timestamp="1688377223057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688375884608" />
-    <state width="1507" height="282" key="GridCell.Tab.0.center" timestamp="1688375884608">
+    <state width="1507" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688377223057" />
+    <state width="1507" height="282" key="GridCell.Tab.0.center" timestamp="1688377223057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688375884608" />
-    <state width="1507" height="282" key="GridCell.Tab.0.left" timestamp="1688375884608">
+    <state width="1507" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688377223057" />
+    <state width="1507" height="282" key="GridCell.Tab.0.left" timestamp="1688377223057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688375884608" />
-    <state width="1507" height="282" key="GridCell.Tab.0.right" timestamp="1688375884608">
+    <state width="1507" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688377223057" />
+    <state width="1507" height="282" key="GridCell.Tab.0.right" timestamp="1688377223057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688375884608" />
-    <state width="1507" height="282" key="GridCell.Tab.1.bottom" timestamp="1688375884609">
+    <state width="1507" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688377223057" />
+    <state width="1507" height="282" key="GridCell.Tab.1.bottom" timestamp="1688377223057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688375884609" />
-    <state width="1507" height="282" key="GridCell.Tab.1.center" timestamp="1688375884609">
+    <state width="1507" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688377223057" />
+    <state width="1507" height="282" key="GridCell.Tab.1.center" timestamp="1688377223057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688375884609" />
-    <state width="1507" height="282" key="GridCell.Tab.1.left" timestamp="1688375884609">
+    <state width="1507" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688377223057" />
+    <state width="1507" height="282" key="GridCell.Tab.1.left" timestamp="1688377223057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688375884609" />
-    <state width="1507" height="282" key="GridCell.Tab.1.right" timestamp="1688375884609">
+    <state width="1507" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688377223057" />
+    <state width="1507" height="282" key="GridCell.Tab.1.right" timestamp="1688377223057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688375884609" />
+    <state width="1507" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688377223057" />
     <state width="1507" height="275" key="GridCell.Tab.2.bottom" timestamp="1688351785643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -817,10 +822,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="125" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1688307820602" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1688373901540">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1688376020497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688373901540" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688376020497" />
     <state x="763" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1688352944301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -841,10 +846,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="118" width="596" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1686230562976" />
-    <state x="275" y="451" width="1251" height="513" key="new project wizard" timestamp="1687944279449">
+    <state x="83" y="59" width="1251" height="513" key="new project wizard" timestamp="1688378304004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="275" y="451" width="1251" height="513" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1687944279449" />
+    <state x="83" y="59" width="1251" height="513" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1688378304004" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1688316458027">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
