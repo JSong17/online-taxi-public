@@ -20,6 +20,8 @@ import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.aspectj.weaver.ast.Or;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -103,6 +105,9 @@ public class OrderInfoService {
     @Autowired
     ServiceMapClient serviceMapClient;
 
+    @Autowired
+    RedissonClient redissonClient;
+
     /**
      * 实时订单派单逻辑
      * @param orderInfo
@@ -153,9 +158,14 @@ public class OrderInfoService {
                     String licenseId = orderDriverResponse.getLicenseId();
                     String vehicleNo = orderDriverResponse.getVehicleNo();
 
+                    String lockKey = (driverId + "").intern();
+                    RLock lock = redissonClient.getLock(lockKey);
+                    lock.lock();
+
                     //判断司机，是
                     // 否有进行中的订单
                     if(isDriverOrderGoingon(driverId) > 0){
+                        lock.unlock();
                         continue ;
                     }
                     //订单直接匹配司机
@@ -179,6 +189,8 @@ public class OrderInfoService {
                     orderInfo.setOrderStatus(OrderConstants.DRIVER_RECEIVE_ORDER);
 
                     orderInfoMapper.updateById(orderInfo);
+
+                    lock.unlock();
                     //退出，不在进行司机的查找
                     break radius;
                 }
