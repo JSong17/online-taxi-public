@@ -8,10 +8,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="模拟司机客户端的开发">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="消息关闭">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sse-driver-client-web/src/main/resources/static/driver-client.html" beforeDir="false" afterPath="$PROJECT_DIR$/sse-driver-client-web/src/main/resources/static/driver-client.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sse-driver-client-web/target/classes/static/driver-client.html" beforeDir="false" afterPath="$PROJECT_DIR$/sse-driver-client-web/target/classes/static/driver-client.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sse-driver-client-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-sse-push/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sse-driver-client-web/src/main/java/com/mashibing/ssedriverclientweb/SseDriverClientWeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-sse-push/src/main/java/com/mashibing/servicessepush/ServiceSsePushApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sse-driver-client-web/src/main/java/com/mashibing/ssedriverclientweb/controller/SseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-sse-push/src/main/java/com/mashibing/servicessepush/controller/SseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sse-driver-client-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-sse-push/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sse-driver-client-web/src/main/resources/static/driver-client.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sse-driver-client-web/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sse-driver-client-web/target/classes/com/mashibing/ssedriverclientweb/SseDriverClientWeb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sse-driver-client-web/target/classes/com/mashibing/ssedriverclientweb/controller/SseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sse-driver-client-web/target/classes/static/driver-client.html" beforeDir="false" afterPath="$PROJECT_DIR$/service-sse-push/src/main/resources/static/service-sse-push-test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +117,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SseDriverClientWeb">
+  <component name="RunManager" selected="Spring Boot.ServiceSsePushApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -165,22 +175,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceVerificationcodeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="service-verificationcode" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mashibing.serviceverificationcode.ServiceVerificationcodeApplication" />
+    <configuration name="ServiceSsePushApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-sse-push" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mashibing.servicessepush.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mashibing.servicessepush.ServiceSsePushApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SseDriverClientWeb" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="sse-driver-client-web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mashibing.ssedriverclientweb.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mashibing.ssedriverclientweb.SseDriverClientWeb" />
+    <configuration name="ServiceVerificationcodeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="service-verificationcode" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mashibing.serviceverificationcode.ServiceVerificationcodeApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -223,11 +233,11 @@
       <item itemvalue="Spring Boot.ServicePriceApplicaton" />
       <item itemvalue="Spring Boot.service-order-8007" />
       <item itemvalue="Spring Boot.ApiPassengerApplication" />
-      <item itemvalue="Spring Boot.SseDriverClientWeb" />
+      <item itemvalue="Spring Boot.ServiceSsePushApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.SseDriverClientWeb" />
+        <item itemvalue="Spring Boot.ServiceSsePushApplication" />
         <item itemvalue="Spring Boot.service-order-8007" />
         <item itemvalue="Spring Boot.ApiPassengerApplication" />
         <item itemvalue="Spring Boot.ServicePriceApplicaton" />
@@ -286,14 +296,7 @@
       <workItem from="1688285383457" duration="5490000" />
       <workItem from="1688292404227" duration="2467000" />
       <workItem from="1688300416359" duration="971000" />
-      <workItem from="1688301591249" duration="35503000" />
-    </task>
-    <task id="LOCAL-00067" summary="api-driver 调用service-driver-user,校验对应的号码的司机是否存在">
-      <created>1687618799726</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1687618799727</updated>
+      <workItem from="1688301591249" duration="38357000" />
     </task>
     <task id="LOCAL-00068" summary="api-driver 调用service-driver-user服务，获取验证码">
       <created>1687625164505</created>
@@ -631,7 +634,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688379210636</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="消息关闭">
+      <created>1688396964819</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1688396964906</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -680,7 +690,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="车辆创建终端改造成功，上传轨迹点成功，地图搜索成功" />
     <MESSAGE value="service-map集成终端搜索服务" />
     <MESSAGE value="api-passenger接受参数" />
     <MESSAGE value="自动生成order_info表的代码" />
@@ -705,7 +714,8 @@
     <MESSAGE value="并发集群测试环境准备,及错误演示" />
     <MESSAGE value="并发派单问题，分布式锁Redission解决方案" />
     <MESSAGE value="模拟司机客户端的开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="模拟司机客户端的开发" />
+    <MESSAGE value="消息关闭" />
+    <option name="LAST_COMMIT_MESSAGE" value="消息关闭" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1688378790335">
@@ -760,38 +770,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1507" height="282" key="GridCell.Tab.0.bottom" timestamp="1688395946896">
+    <state width="1507" height="282" key="GridCell.Tab.0.bottom" timestamp="1688405143936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688395946896" />
-    <state width="1507" height="282" key="GridCell.Tab.0.center" timestamp="1688395946896">
+    <state width="1507" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688405143936" />
+    <state width="1507" height="282" key="GridCell.Tab.0.center" timestamp="1688405143936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688395946896" />
-    <state width="1507" height="282" key="GridCell.Tab.0.left" timestamp="1688395946896">
+    <state width="1507" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688405143936" />
+    <state width="1507" height="282" key="GridCell.Tab.0.left" timestamp="1688405143936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688395946896" />
-    <state width="1507" height="282" key="GridCell.Tab.0.right" timestamp="1688395946896">
+    <state width="1507" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688405143936" />
+    <state width="1507" height="282" key="GridCell.Tab.0.right" timestamp="1688405143936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688395946896" />
-    <state width="1507" height="282" key="GridCell.Tab.1.bottom" timestamp="1688395946897">
+    <state width="1507" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688405143936" />
+    <state width="1507" height="282" key="GridCell.Tab.1.bottom" timestamp="1688405143937">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688395946897" />
-    <state width="1507" height="282" key="GridCell.Tab.1.center" timestamp="1688395946897">
+    <state width="1507" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688405143937" />
+    <state width="1507" height="282" key="GridCell.Tab.1.center" timestamp="1688405143936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688395946897" />
-    <state width="1507" height="282" key="GridCell.Tab.1.left" timestamp="1688395946896">
+    <state width="1507" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688405143936" />
+    <state width="1507" height="282" key="GridCell.Tab.1.left" timestamp="1688405143936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688395946896" />
-    <state width="1507" height="282" key="GridCell.Tab.1.right" timestamp="1688395946897">
+    <state width="1507" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688405143936" />
+    <state width="1507" height="282" key="GridCell.Tab.1.right" timestamp="1688405143937">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688395946897" />
+    <state width="1507" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688405143937" />
     <state width="1507" height="275" key="GridCell.Tab.2.bottom" timestamp="1688351785643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -816,10 +826,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="125" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1688307820602" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1688379211861">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1688400320885">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688379211860" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688400320885" />
     <state x="763" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1688352944301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
