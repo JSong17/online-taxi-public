@@ -2,6 +2,7 @@ package com.mashibing.serviceorder.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mashibing.internalcommon.constant.CommonStatusEnum;
+import com.mashibing.internalcommon.constant.IdentityConstants;
 import com.mashibing.internalcommon.constant.OrderConstants;
 import com.mashibing.internalcommon.dto.Car;
 import com.mashibing.internalcommon.dto.OrderInfo;
@@ -16,6 +17,7 @@ import com.mashibing.serviceorder.mapper.OrderInfoMapper;
 import com.mashibing.serviceorder.remote.ServiceDriverUserClient;
 import com.mashibing.serviceorder.remote.ServiceMapClient;
 import com.mashibing.serviceorder.remote.ServicePriceClient;
+import com.mashibing.serviceorder.remote.ServiceSsePushClient;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -108,6 +110,9 @@ public class OrderInfoService {
     @Autowired
     RedissonClient redissonClient;
 
+    @Autowired
+    ServiceSsePushClient serviceSsePushClient;
+
     /**
      * 实时订单派单逻辑
      * @param orderInfo
@@ -189,6 +194,20 @@ public class OrderInfoService {
                     orderInfo.setOrderStatus(OrderConstants.DRIVER_RECEIVE_ORDER);
 
                     orderInfoMapper.updateById(orderInfo);
+
+                    //通知司机
+                    JSONObject driverContent = new JSONObject();
+                    driverContent.put("passengerId",orderInfo.getPassengerId());
+                    driverContent.put("passengerPhone",orderInfo.getPassengerPhone());
+                    driverContent.put("departure",orderInfo.getDeparture());
+                    driverContent.put("depLongitude",orderInfo.getDepLongitude());
+                    driverContent.put("depLatitude",orderInfo.getDepLatitude());
+
+                    driverContent.put("destination",orderInfo.getDestination());
+                    driverContent.put("destLongitude",orderInfo.getDestLongitude());
+                    driverContent.put("destLatitude",orderInfo.getDestLatitude());
+
+                    serviceSsePushClient.push(driverId, IdentityConstants.DRIVER_IDENTITY,driverContent.toString());
 
                     lock.unlock();
                     //退出，不在进行司机的查找
