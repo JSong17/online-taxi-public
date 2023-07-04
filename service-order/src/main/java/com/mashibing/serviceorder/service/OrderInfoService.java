@@ -209,6 +209,26 @@ public class OrderInfoService {
 
                     serviceSsePushClient.push(driverId, IdentityConstants.DRIVER_IDENTITY,driverContent.toString());
 
+                    //通知乘客
+                    JSONObject passengerContent = new JSONObject();
+                    passengerContent.put("driverId",orderInfo.getDriverId());
+                    passengerContent.put("driverPhone",orderInfo.getDriverPhone());
+                    passengerContent.put("vehicleNo",orderInfo.getVehicleNo());
+
+                    //车辆信息，调用车辆服务
+                    ResponseResult<Car> carById = serviceDriverUserClient.getCarById(carId);
+                    Car carRemote = carById.getData();
+
+                    passengerContent.put("brand",carRemote.getBrand());
+                    passengerContent.put("model",carRemote.getModel());
+                    passengerContent.put("vehicleColor",carRemote.getVehicleColor());
+
+                    passengerContent.put("receiveOrderCarLongitude",orderInfo.getReceiveOrderCarLongitude());
+                    passengerContent.put("receiveOrderCarLatitude",orderInfo.getReceiveOrderCarLatitude());
+
+                    serviceSsePushClient.push(orderInfo.getPassengerId(), IdentityConstants.PASSENGER_IDENTITY,passengerContent.toString());
+
+
                     lock.unlock();
                     //退出，不在进行司机的查找
                     break radius;
