@@ -6,6 +6,8 @@ import com.mashibing.servicemap.remote.TerminalClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /*
  *@author js
  *@version 1.0
@@ -20,7 +22,11 @@ public class TerminalService {
         return terminalClient.add(name,desc);
     }
 
-    public ResponseResult aroundsearch(String center,Integer radius){
+    public ResponseResult<List<TerminalResponse>> aroundsearch(String center, Integer radius){
         return terminalClient.aroundsearch(center,radius);
+    }
+
+    public ResponseResult trsearch(String tid,Long starttime,Long endtime){
+        return terminalClient.trsearch(tid,starttime,endtime);
     }
 }
