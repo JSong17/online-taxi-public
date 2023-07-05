@@ -8,8 +8,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="乘客到达目的地，代码编写完成">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="api-driver去接乘客微服务调用完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/remote/ServiceOrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/remote/ServiceOrderClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/service/ApiDriverOrderInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/service/ApiDriverOrderInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/remote/ServiceOrderClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/remote/ServiceOrderClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/service/ApiDriverOrderInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/service/ApiDriverOrderInfoService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,21 +293,7 @@
       <workItem from="1688292404227" duration="2467000" />
       <workItem from="1688300416359" duration="971000" />
       <workItem from="1688301591249" duration="38450000" />
-      <workItem from="1688455622770" duration="28305000" />
-    </task>
-    <task id="LOCAL-00080" summary="api-driver上传位置功能，获取tid和trid,完成">
-      <created>1687790028880</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1687790028881</updated>
-    </task>
-    <task id="LOCAL-00081" summary="司机上传轨迹点完成">
-      <created>1687870931112</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1687870931113</updated>
+      <workItem from="1688455622770" duration="30766000" />
     </task>
     <task id="LOCAL-00082" summary="司机上传轨迹点完成">
       <created>1687870944741</created>
@@ -632,7 +624,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688560834911</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="api-driver去接乘客微服务调用完成">
+      <created>1688564193569</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1688564193640</updated>
+    </task>
+    <task id="LOCAL-00130" summary="api-driver去接乘客微服务调用完成">
+      <created>1688565194423</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1688565194423</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,7 +687,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="下订单 调用service-price 判断当前城市是否开通服务和计价规则" />
     <MESSAGE value="测试xml中自定义sql语句" />
     <MESSAGE value="上传车辆终端测试，获取车辆终端，结局string和long精度问题" />
     <MESSAGE value="根据车辆id查询可用的司机必要订单信息" />
@@ -706,7 +711,8 @@
     <MESSAGE value="service-map调用轨迹查询接口完成" />
     <MESSAGE value="解析轨迹查询结果" />
     <MESSAGE value="乘客到达目的地，代码编写完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="乘客到达目的地，代码编写完成" />
+    <MESSAGE value="api-driver去接乘客微服务调用完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="api-driver去接乘客微服务调用完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1688378790335">
@@ -761,38 +767,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1482" height="393" key="GridCell.Tab.0.bottom" timestamp="1688563858985">
+    <state width="1482" height="393" key="GridCell.Tab.0.bottom" timestamp="1688568513920">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688563858985" />
-    <state width="1482" height="393" key="GridCell.Tab.0.center" timestamp="1688563858984">
+    <state width="1482" height="393" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688568513920" />
+    <state width="1482" height="393" key="GridCell.Tab.0.center" timestamp="1688568513919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688563858984" />
-    <state width="1482" height="393" key="GridCell.Tab.0.left" timestamp="1688563858984">
+    <state width="1482" height="393" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688568513919" />
+    <state width="1482" height="393" key="GridCell.Tab.0.left" timestamp="1688568513919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688563858984" />
-    <state width="1482" height="393" key="GridCell.Tab.0.right" timestamp="1688563858985">
+    <state width="1482" height="393" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688568513919" />
+    <state width="1482" height="393" key="GridCell.Tab.0.right" timestamp="1688568513920">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688563858985" />
-    <state width="1482" height="393" key="GridCell.Tab.1.bottom" timestamp="1688563858985">
+    <state width="1482" height="393" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688568513920" />
+    <state width="1482" height="393" key="GridCell.Tab.1.bottom" timestamp="1688568513920">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688563858985" />
-    <state width="1482" height="393" key="GridCell.Tab.1.center" timestamp="1688563858985">
+    <state width="1482" height="393" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688568513920" />
+    <state width="1482" height="393" key="GridCell.Tab.1.center" timestamp="1688568513920">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688563858985" />
-    <state width="1482" height="393" key="GridCell.Tab.1.left" timestamp="1688563858985">
+    <state width="1482" height="393" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688568513920" />
+    <state width="1482" height="393" key="GridCell.Tab.1.left" timestamp="1688568513920">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688563858985" />
-    <state width="1482" height="393" key="GridCell.Tab.1.right" timestamp="1688563858985">
+    <state width="1482" height="393" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688568513920" />
+    <state width="1482" height="393" key="GridCell.Tab.1.right" timestamp="1688568513920">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688563858985" />
+    <state width="1482" height="393" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688568513920" />
     <state width="1507" height="393" key="GridCell.Tab.2.bottom" timestamp="1688530702569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -821,10 +827,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="125" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1688307820602" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1688560836694">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1688565307360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688560836694" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688565307360" />
     <state x="763" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1688352944301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
