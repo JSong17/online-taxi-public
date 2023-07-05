@@ -428,4 +428,21 @@ public class OrderInfoService {
         orderInfoMapper.updateById(orderInfo);
         return ResponseResult.success();
     }
+
+    public  ResponseResult passengerGetoff(@RequestBody OrderRequest orderRequest){
+        Long orderId = orderRequest.getOrderId();
+        QueryWrapper<OrderInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("id",orderId);
+
+        OrderInfo orderInfo = orderInfoMapper.selectOne(queryWrapper);
+        orderInfo.setPassengerGetoffTime(LocalDateTime.now());
+        orderInfo.setPassengerGetoffLongitude(orderInfo.getPickUpPassengerLongitude());
+        orderInfo.setPassengerGetoffLatitude(orderInfo.getPickUpPassengerLatitude());
+
+        orderInfo.setOrderStatus(OrderConstants.PASSENGER_GETOFF);
+        //订单形势的路程和时间
+
+        orderInfoMapper.updateById(orderInfo);
+        return ResponseResult.success();
+    }
 }

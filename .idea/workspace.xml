@@ -8,7 +8,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="司机到达乘客目的地">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="司机接到乘客">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/request/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/request/OrderRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/request/OrderRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/request/OrderRequest.class" afterDir="false" />
@@ -293,14 +293,7 @@
       <workItem from="1688292404227" duration="2467000" />
       <workItem from="1688300416359" duration="971000" />
       <workItem from="1688301591249" duration="38450000" />
-      <workItem from="1688455622770" duration="16731000" />
-    </task>
-    <task id="LOCAL-00074" summary="创建车辆和地图上的终端做对应">
-      <created>1687705381577</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1687705381579</updated>
+      <workItem from="1688455622770" duration="19175000" />
     </task>
     <task id="LOCAL-00075" summary="service-map调用高德地图创建轨迹接口">
       <created>1687766207038</created>
@@ -638,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688530750452</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="司机接到乘客">
+      <created>1688541133378</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1688541133378</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,7 +687,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="计价规则，城市编发和车型参数的传递改造" />
     <MESSAGE value="service-price判断计价规则是否是最新版本" />
     <MESSAGE value="service-order判断计价规则是否最新" />
     <MESSAGE value="乘客西单，黑名单设备校验代码完成" />
@@ -712,7 +711,8 @@
     <MESSAGE value="增加循环多次查找2 4 6 （5）公里" />
     <MESSAGE value="去接乘客代码编写" />
     <MESSAGE value="司机到达乘客目的地" />
-    <option name="LAST_COMMIT_MESSAGE" value="司机到达乘客目的地" />
+    <MESSAGE value="司机接到乘客" />
+    <option name="LAST_COMMIT_MESSAGE" value="司机接到乘客" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1688378790335">
@@ -767,38 +767,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1482" height="393" key="GridCell.Tab.0.bottom" timestamp="1688540542759">
+    <state width="1482" height="393" key="GridCell.Tab.0.bottom" timestamp="1688541070178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688540542759" />
-    <state width="1482" height="393" key="GridCell.Tab.0.center" timestamp="1688540542759">
+    <state width="1482" height="393" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688541070178" />
+    <state width="1482" height="393" key="GridCell.Tab.0.center" timestamp="1688541070177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688540542759" />
-    <state width="1482" height="393" key="GridCell.Tab.0.left" timestamp="1688540542758">
+    <state width="1482" height="393" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688541070177" />
+    <state width="1482" height="393" key="GridCell.Tab.0.left" timestamp="1688541070177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688540542758" />
-    <state width="1482" height="393" key="GridCell.Tab.0.right" timestamp="1688540542759">
+    <state width="1482" height="393" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688541070177" />
+    <state width="1482" height="393" key="GridCell.Tab.0.right" timestamp="1688541070177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688540542759" />
-    <state width="1482" height="393" key="GridCell.Tab.1.bottom" timestamp="1688540542760">
+    <state width="1482" height="393" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688541070177" />
+    <state width="1482" height="393" key="GridCell.Tab.1.bottom" timestamp="1688541070178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688540542760" />
-    <state width="1482" height="393" key="GridCell.Tab.1.center" timestamp="1688540542760">
+    <state width="1482" height="393" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688541070178" />
+    <state width="1482" height="393" key="GridCell.Tab.1.center" timestamp="1688541070178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688540542760" />
-    <state width="1482" height="393" key="GridCell.Tab.1.left" timestamp="1688540542759">
+    <state width="1482" height="393" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688541070178" />
+    <state width="1482" height="393" key="GridCell.Tab.1.left" timestamp="1688541070178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688540542759" />
-    <state width="1482" height="393" key="GridCell.Tab.1.right" timestamp="1688540542760">
+    <state width="1482" height="393" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688541070178" />
+    <state width="1482" height="393" key="GridCell.Tab.1.right" timestamp="1688541070178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="393" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688540542760" />
+    <state width="1482" height="393" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688541070178" />
     <state width="1507" height="393" key="GridCell.Tab.2.bottom" timestamp="1688530702569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -827,10 +827,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="125" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1688307820602" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1688530752384">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1688541152406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688530752384" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688541152406" />
     <state x="763" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1688352944301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -855,10 +855,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="83" y="59" width="1251" height="513" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1688378304004" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1688316458027">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1688543952590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1688316458027" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1688543952590" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1688387246722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
