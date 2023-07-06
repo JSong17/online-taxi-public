@@ -31,7 +31,7 @@ public class ApiDriverOrderInfoService {
      * @param orderRequest
      * @return
      */
-    public ResponseResult pickUpPassenger(@RequestBody OrderRequest orderRequest){
+    public ResponseResult pickUpPassenger(OrderRequest orderRequest){
 
         return serviceOrderClient.pickUpPassenger(orderRequest);
     }
