@@ -8,12 +8,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="发起收款口设计&amp;代码骨架">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="司机发起收款代码编写完成">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/controller/PayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/service/PayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/service/PayService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/controller/PayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/controller/PayController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/service/PayService.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/service/PayService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/端口管理.md" beforeDir="false" afterPath="$PROJECT_DIR$/端口管理.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +28,8 @@
       <list>
         <option value="Enum" />
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -109,7 +109,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServiceSsePushApplication">
+  <component name="RunManager" selected="Spring Boot.ServiceVerificationcodeApplication">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -119,19 +119,6 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApiDriverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="api-driver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mashibing.apiDriver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mashibing.apiDriver.ApiDriverApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -189,6 +176,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestAlipayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-pay" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mashibing.pay.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mashibing.pay.TestAlipayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="service-order-8007" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="service-order" />
       <extension name="coverage">
@@ -226,16 +226,16 @@
       <item itemvalue="Spring Boot.ServicePriceApplicaton" />
       <item itemvalue="Spring Boot.service-order-8007" />
       <item itemvalue="Spring Boot.ServiceMapApplication" />
-      <item itemvalue="Spring Boot.ApiDriverApplication" />
       <item itemvalue="Spring Boot.ServiceSsePushApplication" />
+      <item itemvalue="Spring Boot.TestAlipayApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.TestAlipayApplication" />
         <item itemvalue="Spring Boot.ServiceSsePushApplication" />
         <item itemvalue="Spring Boot.ServiceMapApplication" />
         <item itemvalue="Spring Boot.service-order-8007" />
         <item itemvalue="Spring Boot.ServicePriceApplicaton" />
-        <item itemvalue="Spring Boot.ApiDriverApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -293,14 +293,7 @@
       <workItem from="1688301591249" duration="38450000" />
       <workItem from="1688455622770" duration="30766000" />
       <workItem from="1688612987148" duration="7362000" />
-      <workItem from="1688647055224" duration="7153000" />
-    </task>
-    <task id="LOCAL-00089" summary="创建订单调试通过">
-      <created>1687960638819</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1687960638819</updated>
+      <workItem from="1688647055224" duration="18401000" />
     </task>
     <task id="LOCAL-00090" summary="创建订单调试通过">
       <created>1687960657018</created>
@@ -638,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688654198010</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="司机发起收款代码编写完成">
+      <created>1688657839214</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1688657839214</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,7 +687,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="判断司机是否有正常订单" />
     <MESSAGE value="订单和司机匹配" />
     <MESSAGE value="经纬度修改成字符串，解析搜索车辆结果代码优化" />
     <MESSAGE value="单机解决实时订单并发问题" />
@@ -712,7 +711,8 @@
     <MESSAGE value="service-price 计算实际价格" />
     <MESSAGE value="行程结束，计算价格" />
     <MESSAGE value="发起收款口设计&amp;代码骨架" />
-    <option name="LAST_COMMIT_MESSAGE" value="发起收款口设计&amp;代码骨架" />
+    <MESSAGE value="司机发起收款代码编写完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="司机发起收款代码编写完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1688378790335">
@@ -727,10 +727,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="85" y="189" width="1186" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1688371244350" />
-    <state x="699" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1687680464391">
+    <state x="699" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1688661724875">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="699" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1687680464391" />
+    <state x="699" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1688661724875" />
     <state x="751" y="138" key="#com.intellij.ide.util.MemberChooser" timestamp="1686758873718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -751,10 +751,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="522" y="76" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1686815034229" />
-    <state width="1136" height="466" key="DebuggerActiveHint" timestamp="1687972223349">
+    <state width="1136" height="466" key="DebuggerActiveHint" timestamp="1688703512451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1136" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1687972223349" />
+    <state width="1136" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1688703512451" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1686734615084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -767,54 +767,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1482" height="346" key="GridCell.Tab.0.bottom" timestamp="1688657554144">
+    <state width="1482" height="346" key="GridCell.Tab.0.bottom" timestamp="1688720755167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688657554144" />
-    <state width="1482" height="346" key="GridCell.Tab.0.center" timestamp="1688657554144">
+    <state width="1482" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688720755167" />
+    <state width="1482" height="346" key="GridCell.Tab.0.center" timestamp="1688720755167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="346" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688657554144" />
-    <state width="1482" height="346" key="GridCell.Tab.0.left" timestamp="1688657554144">
+    <state width="1482" height="346" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688720755167" />
+    <state width="1482" height="346" key="GridCell.Tab.0.left" timestamp="1688720755139">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="346" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688657554144" />
-    <state width="1482" height="346" key="GridCell.Tab.0.right" timestamp="1688657554144">
+    <state width="1482" height="346" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688720755139" />
+    <state width="1482" height="346" key="GridCell.Tab.0.right" timestamp="1688720755167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="346" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688657554144" />
-    <state width="1482" height="346" key="GridCell.Tab.1.bottom" timestamp="1688657554144">
+    <state width="1482" height="346" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688720755167" />
+    <state width="1482" height="346" key="GridCell.Tab.1.bottom" timestamp="1688720755167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688657554144" />
-    <state width="1482" height="346" key="GridCell.Tab.1.center" timestamp="1688657554144">
+    <state width="1482" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688720755167" />
+    <state width="1482" height="346" key="GridCell.Tab.1.center" timestamp="1688720755167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="346" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688657554144" />
-    <state width="1482" height="346" key="GridCell.Tab.1.left" timestamp="1688657554144">
+    <state width="1482" height="346" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688720755167" />
+    <state width="1482" height="346" key="GridCell.Tab.1.left" timestamp="1688720755167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="346" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688657554144" />
-    <state width="1482" height="346" key="GridCell.Tab.1.right" timestamp="1688657554144">
+    <state width="1482" height="346" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688720755167" />
+    <state width="1482" height="346" key="GridCell.Tab.1.right" timestamp="1688720755167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="346" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688657554144" />
-    <state width="1507" height="393" key="GridCell.Tab.2.bottom" timestamp="1688530702569">
+    <state width="1482" height="346" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688720755167" />
+    <state width="1482" height="346" key="GridCell.Tab.2.bottom" timestamp="1688720755167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="393" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688530702569" />
-    <state width="1507" height="393" key="GridCell.Tab.2.center" timestamp="1688530702569">
+    <state width="1482" height="346" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688720755167" />
+    <state width="1482" height="346" key="GridCell.Tab.2.center" timestamp="1688720755167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="393" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688530702569" />
-    <state width="1507" height="393" key="GridCell.Tab.2.left" timestamp="1688530702569">
+    <state width="1482" height="346" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688720755167" />
+    <state width="1482" height="346" key="GridCell.Tab.2.left" timestamp="1688720755167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="393" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688530702569" />
-    <state width="1507" height="393" key="GridCell.Tab.2.right" timestamp="1688530702569">
+    <state width="1482" height="346" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688720755167" />
+    <state width="1482" height="346" key="GridCell.Tab.2.right" timestamp="1688720755167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1507" height="393" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688530702569" />
+    <state width="1482" height="346" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688720755167" />
     <state x="531" y="335" key="Registry" timestamp="1688136827749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -823,14 +823,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="674" y="221" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1688481271211" />
-    <state x="125" y="172" key="SettingsEditor" timestamp="1688307820602">
+    <state x="125" y="172" key="SettingsEditor" timestamp="1688720888026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="125" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1688307820602" />
-    <state x="695" y="236" key="Vcs.Push.Dialog.v2" timestamp="1688654216263">
+    <state x="125" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1688720888026" />
+    <state x="695" y="236" key="Vcs.Push.Dialog.v2" timestamp="1688657843495">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="695" y="236" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688654216263" />
+    <state x="695" y="236" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688657843495" />
     <state x="763" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1688352944301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -851,17 +851,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="118" width="596" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1686230562976" />
-    <state x="83" y="59" width="1251" height="513" key="new project wizard" timestamp="1688378304004">
+    <state x="97" y="162" width="1251" height="513" key="new project wizard" timestamp="1688661638920">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="83" y="59" width="1251" height="513" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1688378304004" />
+    <state x="97" y="162" width="1251" height="513" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1688661638920" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1688543952590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1688543952590" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1688649432525">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1688702100508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1688649432525" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1688702100508" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-verificationcode/src/main/java/com/mashibing/serviceverificationcode/ServiceVerificationcodeApplication.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-pay/src/main/java/com/mashibing/pay/TestAlipayApplication.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-pay/src/main/java/com/mashibing/pay/AlipayController.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
