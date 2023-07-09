@@ -1,8 +1,10 @@
 package com.mashibing.apiDriver.controller;
 
 import com.mashibing.apiDriver.service.ApiDriverOrderInfoService;
+import com.mashibing.apiDriver.service.UserService;
 import com.mashibing.internalcommon.constant.CommonStatusEnum;
 import com.mashibing.internalcommon.constant.IdentityConstants;
+import com.mashibing.internalcommon.dto.DriverUserWorkStatus;
 import com.mashibing.internalcommon.dto.OrderInfo;
 import com.mashibing.internalcommon.dto.ResponseResult;
 import com.mashibing.internalcommon.dto.TokenResult;
@@ -23,6 +25,9 @@ public class OrderController {
 
     @Autowired
     ApiDriverOrderInfoService apiDriverOrderInfoService;
+
+    @Autowired
+    UserService userService;
 
     /**
      * 去接乘客
@@ -91,5 +96,10 @@ public class OrderController {
         String phone = tokenResult.getPhone();
 
         return apiDriverOrderInfoService.currentOrder(phone,IdentityConstants.DRIVER_IDENTITY);
+    }
+
+    @GetMapping("/work-status")
+    public ResponseResult<DriverUserWorkStatus> getWorkStatus(Long driverId){
+        return userService.getWorkStatus(driverId);
     }
 }
