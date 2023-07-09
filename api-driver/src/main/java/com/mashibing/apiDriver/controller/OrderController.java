@@ -1,11 +1,17 @@
 package com.mashibing.apiDriver.controller;
 
 import com.mashibing.apiDriver.service.ApiDriverOrderInfoService;
+import com.mashibing.internalcommon.constant.CommonStatusEnum;
+import com.mashibing.internalcommon.constant.IdentityConstants;
 import com.mashibing.internalcommon.dto.OrderInfo;
 import com.mashibing.internalcommon.dto.ResponseResult;
+import com.mashibing.internalcommon.dto.TokenResult;
 import com.mashibing.internalcommon.request.OrderRequest;
+import com.mashibing.internalcommon.util.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 /*
  *@author js
@@ -72,5 +78,18 @@ public class OrderController {
     @GetMapping("/detail")
     public ResponseResult<OrderInfo> detail(Long orderId){
         return apiDriverOrderInfoService.detail(orderId);
+    }
+
+    @GetMapping("/current")
+    public ResponseResult<OrderInfo> currentOrder(HttpServletRequest httpServletRequest){
+        String authorization = httpServletRequest.getHeader("Authorization");
+        TokenResult tokenResult = JwtUtils.parseToken(authorization);
+        String identity = tokenResult.getIdentity();
+        if (!identity.equals(IdentityConstants.DRIVER_IDENTITY)){
+            return ResponseResult.fail(CommonStatusEnum.Token_ERROR.getCode(),CommonStatusEnum.Token_ERROR.getValue());
+        }
+        String phone = tokenResult.getPhone();
+
+        return apiDriverOrderInfoService.currentOrder(phone,IdentityConstants.DRIVER_IDENTITY);
     }
 }

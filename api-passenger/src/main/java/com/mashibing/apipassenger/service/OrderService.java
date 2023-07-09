@@ -34,4 +34,8 @@ public class OrderService {
     public ResponseResult<OrderInfo> detail(Long orderId){
         return serviceOrderClient.detail(orderId);
     }
+
+    public ResponseResult<OrderInfo> currentOrder(String phone , String identity){
+        return serviceOrderClient.current(phone,identity);
+    }
 }

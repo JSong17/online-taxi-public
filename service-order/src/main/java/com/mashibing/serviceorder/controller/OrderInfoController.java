@@ -52,6 +52,8 @@ public class OrderInfoController {
     }
 
 
+
+
     /**
      * 去接乘客
      * @param orderRequest
@@ -122,5 +124,10 @@ public class OrderInfoController {
     @PostMapping("/cancel")
     public ResponseResult cancel(Long orderId,String identity){
         return orderInfoService.cancel(orderId,identity);
+    }
+
+    @GetMapping("/current")
+    public ResponseResult current(String phone , String identity){
+        return orderInfoService.current(phone , identity);
     }
 }
