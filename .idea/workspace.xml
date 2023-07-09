@@ -8,21 +8,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="api-driver修改司机工作状态，出车">
+    <list default="true" id="7aad5c5e-c70e-4147-8626-f5e37a847444" name="Default Changelist" comment="根据司机的accessToken,查询司机和车辆的绑定关系">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/remote/ServiceDriverUserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/remote/ServiceDriverUserClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/src/main/java/com/mashibing/apiDriver/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/remote/ServiceDriverUserClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/remote/ServiceDriverUserClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-driver/target/classes/com/mashibing/apiDriver/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/request/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/request/OrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/util/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/src/main/java/com/mashibing/internalcommon/util/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/util/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/util/JwtUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/service/DriverCarBindingRelationshipMapperService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-driver-user/src/main/java/com/mashibing/serviceDriverUser/service/DriverCarBindingRelationshipMapperService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-driver-user/target/classes/com/mashibing/serviceDriverUser/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-driver-user/target/classes/com/mashibing/serviceDriverUser/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-driver-user/target/classes/com/mashibing/serviceDriverUser/service/DriverCarBindingRelationshipMapperService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-driver-user/target/classes/com/mashibing/serviceDriverUser/service/DriverCarBindingRelationshipMapperService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/request/OrderRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/internal-common/target/classes/com/mashibing/internalcommon/request/OrderRequest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,11 +224,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ApiPassengerApplication" />
         <item itemvalue="Spring Boot.ServiceDriverUserApplication" />
         <item itemvalue="Spring Boot.ApiDriverApplication" />
         <item itemvalue="Spring Boot.ServiceMapApplication" />
         <item itemvalue="Spring Boot.ServiceSsePushApplication" />
-        <item itemvalue="Spring Boot.ApiPassengerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -301,14 +289,7 @@
       <workItem from="1688647055224" duration="19742000" />
       <workItem from="1688723433710" duration="995000" />
       <workItem from="1688724846797" duration="1248000" />
-      <workItem from="1688783715757" duration="23988000" />
-    </task>
-    <task id="LOCAL-00096" summary="service-order判断计价规则是否最新">
-      <created>1688049367702</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1688049367741</updated>
+      <workItem from="1688783715757" duration="25775000" />
     </task>
     <task id="LOCAL-00097" summary="service-order判断计价规则是否最新">
       <created>1688049549304</created>
@@ -646,7 +627,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688828807031</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="根据司机的accessToken,查询司机和车辆的绑定关系">
+      <created>1688873782008</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1688873782008</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -695,7 +683,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="消息关闭" />
     <MESSAGE value="消息服务改造完成" />
     <MESSAGE value="派单业务集成消息推送" />
     <MESSAGE value="乘客消息推送整合到service order" />
@@ -720,7 +707,8 @@
     <MESSAGE value="司机端和乘客端取消订单" />
     <MESSAGE value="订单未派单成功，订单无效编码完成" />
     <MESSAGE value="api-driver修改司机工作状态，出车" />
-    <option name="LAST_COMMIT_MESSAGE" value="api-driver修改司机工作状态，出车" />
+    <MESSAGE value="根据司机的accessToken,查询司机和车辆的绑定关系" />
+    <option name="LAST_COMMIT_MESSAGE" value="根据司机的accessToken,查询司机和车辆的绑定关系" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1688829015330">
@@ -779,54 +767,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="214" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686231727977" />
-    <state width="1482" height="344" key="GridCell.Tab.0.bottom" timestamp="1688873439228">
+    <state width="1482" height="344" key="GridCell.Tab.0.bottom" timestamp="1688875053271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="344" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688873439228" />
-    <state width="1482" height="344" key="GridCell.Tab.0.center" timestamp="1688873439227">
+    <state width="1482" height="344" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688875053271" />
+    <state width="1482" height="344" key="GridCell.Tab.0.center" timestamp="1688875053271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="344" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688873439227" />
-    <state width="1482" height="344" key="GridCell.Tab.0.left" timestamp="1688873439227">
+    <state width="1482" height="344" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688875053271" />
+    <state width="1482" height="344" key="GridCell.Tab.0.left" timestamp="1688875053271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="344" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688873439227" />
-    <state width="1482" height="344" key="GridCell.Tab.0.right" timestamp="1688873439228">
+    <state width="1482" height="344" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688875053271" />
+    <state width="1482" height="344" key="GridCell.Tab.0.right" timestamp="1688875053271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="344" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688873439228" />
-    <state width="1482" height="344" key="GridCell.Tab.1.bottom" timestamp="1688873439228">
+    <state width="1482" height="344" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688875053271" />
+    <state width="1482" height="344" key="GridCell.Tab.1.bottom" timestamp="1688875053271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688873439228" />
-    <state width="1482" height="344" key="GridCell.Tab.1.center" timestamp="1688873439228">
+    <state width="1482" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688875053271" />
+    <state width="1482" height="344" key="GridCell.Tab.1.center" timestamp="1688875053271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="344" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688873439228" />
-    <state width="1482" height="344" key="GridCell.Tab.1.left" timestamp="1688873439228">
+    <state width="1482" height="344" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688875053271" />
+    <state width="1482" height="344" key="GridCell.Tab.1.left" timestamp="1688875053271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="344" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688873439228" />
-    <state width="1482" height="344" key="GridCell.Tab.1.right" timestamp="1688873439228">
+    <state width="1482" height="344" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688875053271" />
+    <state width="1482" height="344" key="GridCell.Tab.1.right" timestamp="1688875053271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688873439228" />
-    <state width="1482" height="344" key="GridCell.Tab.2.bottom" timestamp="1688832646539">
+    <state width="1482" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688875053271" />
+    <state width="1482" height="344" key="GridCell.Tab.2.bottom" timestamp="1688874816165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="344" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688832646539" />
-    <state width="1482" height="344" key="GridCell.Tab.2.center" timestamp="1688832646538">
+    <state width="1482" height="344" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688874816165" />
+    <state width="1482" height="344" key="GridCell.Tab.2.center" timestamp="1688874816164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="344" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688832646538" />
-    <state width="1482" height="344" key="GridCell.Tab.2.left" timestamp="1688832646538">
+    <state width="1482" height="344" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688874816164" />
+    <state width="1482" height="344" key="GridCell.Tab.2.left" timestamp="1688874816163">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="344" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688832646538" />
-    <state width="1482" height="344" key="GridCell.Tab.2.right" timestamp="1688832646538">
+    <state width="1482" height="344" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688874816163" />
+    <state width="1482" height="344" key="GridCell.Tab.2.right" timestamp="1688874816164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1482" height="344" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688832646538" />
+    <state width="1482" height="344" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688874816164" />
     <state x="531" y="335" key="Registry" timestamp="1688136827749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -839,10 +827,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="125" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1688720888026" />
-    <state x="473" y="251" key="Vcs.Push.Dialog.v2" timestamp="1688828817133">
+    <state x="473" y="251" key="Vcs.Push.Dialog.v2" timestamp="1688873784186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="473" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688828817133" />
+    <state x="473" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1688873784186" />
     <state x="763" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1688352944301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -888,6 +876,11 @@
           <url>file://$PROJECT_DIR$/service-pay/src/main/java/com/mashibing/pay/controller/AlipayController.java</url>
           <line>49</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-order/src/main/java/com/mashibing/serviceorder/service/OrderInfoService.java</url>
+          <line>198</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
