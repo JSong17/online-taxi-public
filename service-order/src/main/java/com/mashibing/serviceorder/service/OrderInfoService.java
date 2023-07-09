@@ -81,9 +81,13 @@ public class OrderInfoService {
         }
 
 
-        //需要判断 下单的设备是否是 黑名单设备
-        if (isBlackDevice(orderRequest))
+//        //需要判断 下单的设备是否是 黑名单设备
+//        if (isBlackDevice(orderRequest))
+//            return ResponseResult.fail(CommonStatusEnum.DEVICE_IS_BLACK.getCode(), CommonStatusEnum.DEVICE_IS_BLACK.getValue());
+
+        if (isBlackDevice(orderRequest)) {
             return ResponseResult.fail(CommonStatusEnum.DEVICE_IS_BLACK.getCode(), CommonStatusEnum.DEVICE_IS_BLACK.getValue());
+        }
 
         //判断：下的那的城市和计价规则是否正常
         if(!isPriceRuleExists(orderRequest)){
@@ -590,6 +594,11 @@ public class OrderInfoService {
         orderInfo.setOrderStatus(OrderConstants.TO_START_PAY);
         orderInfoMapper.updateById(orderInfo);
         return ResponseResult.success();
+    }
+
+    public ResponseResult<OrderInfo> detail(Long orderId){
+        OrderInfo orderInfo =  orderInfoMapper.selectById(orderId);
+        return ResponseResult.success(orderInfo);
     }
 
 

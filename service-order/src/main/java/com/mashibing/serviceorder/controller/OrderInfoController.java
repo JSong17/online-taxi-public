@@ -2,6 +2,7 @@ package com.mashibing.serviceorder.controller;
 
 
 import com.mashibing.internalcommon.constant.HeaderParamCnmstants;
+import com.mashibing.internalcommon.dto.OrderInfo;
 import com.mashibing.internalcommon.dto.ResponseResult;
 import com.mashibing.internalcommon.request.OrderRequest;
 import com.mashibing.serviceorder.service.OrderInfoService;
@@ -39,6 +40,17 @@ public class OrderInfoController {
         log.info("service-order" + orderRequest.getAddress());
         return orderInfoService.add(orderRequest);
     }
+
+    /**
+     * 订单详情
+     * @param orderId
+     * @return
+     */
+    @GetMapping("/detail")
+    public ResponseResult<OrderInfo> detail(Long orderId){
+        return orderInfoService.detail(orderId);
+    }
+
 
     /**
      * 去接乘客

@@ -1,5 +1,6 @@
 package com.mashibing.apiDriver.remote;
 
+import com.mashibing.internalcommon.dto.OrderInfo;
 import com.mashibing.internalcommon.dto.ResponseResult;
 import com.mashibing.internalcommon.request.OrderRequest;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -29,4 +30,7 @@ public interface ServiceOrderClient {
 
     @PostMapping("/order/push-pay-info")
     public ResponseResult pushPayInfo(@RequestBody OrderRequest orderRequest);
+
+    @RequestMapping(method = RequestMethod.GET, value = "/order/detail")
+    public ResponseResult<OrderInfo> detail(@RequestParam Long orderId);
 }
